@@ -22,31 +22,30 @@ traces:
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=Edit
     kind: page_revision
     key: Edit
-    timestamp: 2026-05-17
-    timestamp_precision: day
+    timestamp: 2026-05-17T20:43Z
     origin: { provider: azure, asn: AS8075, ip: 20.65.250.157 }
     content_kind: probe_test
     content_status: recoverable_via_history
     attribution: { confidence: likely, evidence: [cloud_asn_match, timing_match] }
+    revision_range: 2026-05-17T20:43Z → 2026-05-17T21:51Z (8 revisions)
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: Eight test edits.
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=WikiWikiSandbox
     kind: page_revision
     key: WikiWikiSandbox
-    timestamp: 2026-05-27
-    timestamp_precision: day
+    timestamp: 2026-05-27T05:55Z
     origin: { provider: azure, asn: AS8075, ip: 20.25.208.249 }
     content_kind: probe_test
     content_status: recoverable_via_history
     attribution: { confidence: likely, evidence: [cloud_asn_match, timing_match] }
+    revision_range: 2026-05-27T05:55Z → 2026-05-27T06:02Z (8 revisions)
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=OpenAIRegCFTest
     kind: page
     key: OpenAIRegCFTest
-    timestamp: 2026-06-18
-    timestamp_precision: day
+    timestamp: 2026-06-18T15:18Z
     origin: { provider: azure, asn: AS8075, ip: 20.168.47.217 }
     task_cluster: regcf-isti
     content_kind: probe_test
@@ -63,6 +62,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 52.225.32.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge362783154
@@ -73,6 +73,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.165.181.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge419954644
@@ -83,6 +84,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.168.76.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DUBridge127658477
@@ -93,6 +95,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.97.26.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DataUSABridge562751166
@@ -103,6 +106,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.230.226.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=DataUSAPovertyBridgeJun22X27559
@@ -113,6 +117,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 57.151.144.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&id=EditorIndexDataUSAPovertyResearchX91859
@@ -123,6 +128,7 @@ traces:
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.25.166.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: Page name mimics the wiki's own naming style (EditorIndex…).
@@ -134,9 +140,11 @@ traces:
     content_kind: bridge
     content_status: recoverable_via_history
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    revision_range: 2026-06-22T03:46Z → 2026-06-22T03:47Z (2 revisions)
+    origin: { provider: azure, asn: AS8075, ip: 20.168.34.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Pre-existing page overwritten with a "research bridge".
+    notes: "Pre-existing page overwritten with a 'research bridge'. History shows 2 distinct /24s: 20.168.34.x, 20.245.175.x."
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=browse&diff=1&id=Manuskript
     kind: page_revision
     key: Manuskript

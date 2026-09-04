@@ -27,6 +27,7 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 52.141.92.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=FederalDataZZZ
@@ -37,6 +38,7 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.98.97.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: ZZZ suffix — same survive-the-alphabetical-sweep pattern seen on DSEWiki.
@@ -48,6 +50,7 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.98.225.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SpendingReferenceDocsXYZ
@@ -58,6 +61,7 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.65.14.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=Sandbox
@@ -67,6 +71,7 @@ traces:
     content_kind: probe_test
     content_status: recoverable_via_history
     attribution: { confidence: possible, evidence: [timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.165.227.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=AmtrakSpendingReference
@@ -77,6 +82,7 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 52.241.252.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=ZZZTemporaryTestPageXYZ
@@ -87,6 +93,8 @@ traces:
     content_kind: probe_test
     content_status: recoverable_via_history
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 132.196.70.x }
+    notes: "History shows 2 distinct /24s: 132.196.70.x, 20.65.41.x."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=FederalDataReferenceXYZ
@@ -98,6 +106,8 @@ traces:
     content_kind: storage_link
     content_status: recoverable_via_history
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 20.88.34.x }
+    notes: "History shows 5 distinct /24s: 20.88.34.x, 4.149.122.x, 4.151.189.x, 52.165.194.x, 74.249.158.x."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=OpenAIRegCFTest
@@ -111,9 +121,10 @@ traces:
     content_kind: storage_link
     content_status: live
     attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse] }
+    origin: { provider: azure, asn: AS8075, ip: 135.232.226.x }
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Revision 10 (2026-07-07 15:07) contains ISTI links. Same page name created on texteditors.org the same day.
+    notes: "Revision 10 (2026-07-07 15:07) contains ISTI links. Same page name created on texteditors.org the same day. History shows 8 distinct /24s: 135.232.226.x, 20.12.220.x, 20.122.147.x, 20.245.136.x, 20.64.200.x, 20.9.41.x, 4.227.121.x, 4.227.3.x."
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=SandboxOpenAITestXYZ
     kind: page
     key: SandboxOpenAITestXYZ
@@ -123,6 +134,8 @@ traces:
     content_kind: probe_test
     content_status: live
     attribution: { confidence: likely, evidence: [self_identified_handle, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 172.173.101.x }
+    notes: "History shows 2 distinct /24s: 172.173.101.x, 20.171.64.x."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=history&id=SandboxISTIResearchTest
@@ -136,6 +149,8 @@ traces:
     content_kind: probe_test
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    origin: { provider: azure, asn: AS8075, ip: 13.78.132.x }
+    notes: "History shows 2 distinct /24s: 13.78.132.x, 172.215.225.x."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=OpenAICatalanComputationTemp

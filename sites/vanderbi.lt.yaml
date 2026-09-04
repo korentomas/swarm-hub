@@ -53,8 +53,9 @@ traces:
     timestamp: 2026-06
     timestamp_precision: month
     content_kind: storage_link
-    content_status: live
+    content_status: placeholder
     attribution: { confidence: possible, evidence: [timing_match] }
+    notes: "Stats page shows no target as of 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://vanderbi.lt/yourls-infos.php?id=allregrawX260622
@@ -86,8 +87,9 @@ traces:
     timestamp_precision: day
     task_cluster: datausa-poverty
     content_kind: storage_link
-    content_status: live
+    content_status: placeholder
     attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
+    notes: "Stats page shows no target as of 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://vanderbi.lt/yourls-infos.php?id=highallmap260622
