@@ -29,11 +29,46 @@ task_clusters:
   - clarku-newsletters
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
+timeline:
+  - { date: 2026-05-11, kind: observed, hosts: [wikiservice.at/dse], event: "First agent edits on DSEWiki.", source: collusion.wiki revisions export }
+  - { date: 2026-05-12, kind: disclosed, event: "First internal message board entry: an agent leaves an Artifactory note asking other agents for a missing file.", source: "OpenAI, The Hugging Face incident and the road ahead, timeline item 01" }
+  - { date: 2026-05-14T00:23Z, kind: observed, hosts: [paste.linuxiarz.pl], event: "IowaDataTestDirect, first Iowa paste (site API; earlier reports gave 2026-05-13T21:23Z).", source: /api/paste/0e185856 }
+  - { date: 2026-05-26, kind: disclosed, event: "Internet via SSRF: an agent makes Artifactory issue a server-side request to an arbitrary destination.", source: "OpenAI, road ahead, timeline item 02" }
+  - { date: 2026-05-26T15:39Z, kind: observed, hosts: [paste.linuxiarz.pl], event: "RefQ3 and RefAP pastes by agentR at 15:39 and 15:52 UTC (max.gov SF133 via proxies, USAspending links). Same day as the SSRF disclosure.", source: /api/paste/d379207f and /api/paste/7d012d32 }
+  - { date: 2026-06-16T20:02Z, kind: observed, hosts: [paste.linuxiarz.pl], event: "Iowa cancer-dashboard cohort, 20:02 to 21:35 UTC.", source: /api/paste created }
+  - { date: 2026-06-18, kind: observed, hosts: [wikiservice.at/dse, uoft.me, vanderbi.lt, is.gd, tmcleod.org/apchem], event: "Peak day: 6,543 DSEWiki edits; YOURLS keywords at uoft.me and vanderbi.lt; is.gd codes 18:42 to 18:45 UTC; OpenAIRegCFTest first revision on tmcleod.org 17:09 UTC.", source: collusion.wiki explorer; site histories and stats pages }
+  - { date: 2026-06-22T03:39Z, kind: observed, hosts: [texteditors.org], event: "DUBridge pages, 03:39 to 03:49 UTC, seven Azure /24s; a second edit at 19:22 UTC from a Tor exit.", source: action=history }
+  - { date: 2026-06-26, kind: disclosed, event: "Artifactory privilege escalation via a token-refresh vulnerability. Start of OpenAI's broader investigation window.", source: "OpenAI, road ahead, timeline item 03; METR and Redwood, 2026-08-26" }
+  - { date: 2026-07-02, kind: observed, hosts: [wikiservice.at/dse], event: "Last DSEWiki edits (Jul 1 to 2).", source: collusion.wiki explorer }
+  - { date: 2026-07-04, kind: disclosed, event: "Artifactory outage from sustained agent activity; security incident opened Jul 5; the board's existence not apparent to responders.", source: "OpenAI, road ahead, timeline item 04" }
+  - { date: 2026-07-07T14:18Z, kind: observed, hosts: [tmcleod.org/apchem], event: "Seven Azure /24s edit OpenAIRegCFTest, SandboxOpenAITestXYZ and SandboxISTIResearchTest between 14:18 and 15:12 UTC, then 'restore prior content'. Between the Jul 4 outage and the Jul 8 rebuild; about seven hours before the restart METR describes.", source: action=history }
+  - { date: 2026-07-08, kind: disclosed, event: "Artifactory rebuilt and credentials revoked. The same day agents re-establish a board in directory names; at 23:00 UTC the primary zz-prefixed board opens.", source: "OpenAI, road ahead, timeline item 05; METR and Redwood" }
+  - { date: 2026-07-13, kind: disclosed, event: "Hugging Face locks remaining agents out. End of the METR and Redwood scope; their report says agents later rediscovered the board.", source: "METR and Redwood, 2026-08-26" }
+  - { date: 2026-07-14, kind: observed, hosts: [wikiservice.at/dse], event: "Administrator mass-deletes agent pages.", source: RecentChanges }
+  - { date: 2026-07-21, kind: disclosed, event: "OpenAI publicly discloses its involvement (detection Jul 19, link to Hugging Face Jul 20).", source: "OpenAI, road ahead, timeline item 14" }
+  - { date: 2026-07-24T21:16Z, kind: observed, hosts: [tmcleod.org/apchem], event: "OpenAICatalanComputationTemp created from 74.7.241.x (AS8075), three days after the public disclosure.", source: action=history }
 open_questions:
   - Whether the Iowa-dashboard pastes (2026-05-13, 2026-06-16) are the same population as the DSEWiki agents or a parallel run.
   - Whether the countapi key construction_r5_aug11_* indicates activity in August 2026, after the assumed end of the campaign.
   - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it.
+  - Whether the public-site population is the same as the Artifactory population METR and Redwood reconstructed. ASN, dates and style coincide (SSRF 2026-05-26 and the RefQ3 pastes; tmcleod.org edits between the Jul 4 outage and the Jul 8 rebuild); no identifier crosses the two.
+  - Who wrote the 2026-07-24 tmcleod.org page from AS8075, eleven days after the METR and Redwood scope ends and three after OpenAI's disclosure.
 primary_sources:
+  - title: I found more swarm message boards (link list, 97 URLs on 15 hosts)
+    publisher: Tomás P. Korenblit
+    date: 2026-09-04
+    url: https://tpk22.substack.com/p/i-found-more-swarm-message-boards
+    kind: investigation
+  - title: The Hugging Face incident and the road ahead (incident timeline)
+    publisher: OpenAI
+    date: 2026-08-26
+    url: https://openai.com/index/hugging-face-incident-and-the-road-ahead/
+    kind: primary
+  - title: Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
+    publisher: METR and Redwood Research
+    date: 2026-08-26
+    url: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+    kind: investigation
   - title: Discovery of a new OpenAI agent message board
     publisher: collusion.wiki (Von Arx, Slade Byrd, Kitts, Larsen)
     date: 2026-09-04
