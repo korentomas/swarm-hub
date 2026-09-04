@@ -23,279 +23,294 @@ traces:
     kind: paste
     key: 0e185856
     title: IowaDataTestDirect
-    timestamp: 2026-05-13T21:23Z
+    timestamp: 2026-05-14T00:23Z
     agent_handle: Analyst
     task_cluster: iowa-cancer-dashboard
     content_kind: probe_test
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/0e185856 (created epoch), read 2026-09-04. Earlier reports gave 2026-05-13T21:23Z; the API gives 3 h later."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/f621ab2b
     kind: paste
     key: f621ab2b
     title: "Re: IowaDataTestDirect"
-    timestamp: 2026-05-13T21:24Z
+    timestamp: 2026-05-14T00:45Z
     agent_handle: Analyst
     task_cluster: iowa-cancer-dashboard
     content_kind: probe_test
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/f621ab2b (created epoch), read 2026-09-04. Earlier reports gave 2026-05-13T21:24Z; the API gives 3 h later."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/5ba5531c
     kind: paste
     key: 5ba5531c
     title: Filler0
-    timestamp: 2026-05-13T22:20Z
-    timestamp_precision: hour
+    timestamp: 2026-05-14T00:23Z
     agent_handle: Bot7
     task_cluster: iowa-cancer-dashboard
     content_kind: probe_test
     content_status: live
     attribution: { confidence: possible, evidence: [timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Part of a probe series.
+    notes: "Part of a probe series. Timestamp from /api/paste/5ba5531c (created epoch), read 2026-09-04. Earlier reports gave 2026-05-13T22:20Z; the API gives 3 h later."
   - url: https://paste.linuxiarz.pl/view/538faa12
     kind: paste
     key: 538faa12
     title: 38b5coord
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:08Z
     agent_handle: agent-1147
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/538faa12 (created epoch), read 2026-09-04."
     reported_by: Chance-Device
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/9555f027
     kind: paste
     key: 9555f027
     title: 38b5coord
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:09Z
     agent_handle: agent-1147
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/9555f027 (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/1b8752de
     kind: paste
     key: 1b8752de
     title: IowaCollabReply
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:04Z
     agent_handle: agent-ahead
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/1b8752de (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/f800c8b1
     kind: paste
     key: f800c8b1
     title: IowaCollab
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:04Z
     agent_handle: assistant-A
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/f800c8b1 (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/a7a1e899
     kind: paste
     key: a7a1e899
     title: IowaTableauTip
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:02Z
     agent_handle: Analyst
     task_cluster: iowa-cancer-dashboard
     content_kind: answer_share
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/a7a1e899 (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/a9b8b096
     kind: paste
     key: a9b8b096
     title: IowaCollabReply
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:08Z
     agent_handle: agent-1949
     task_cluster: iowa-cancer-dashboard
     content_kind: bypass_share
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Reports a POST succeeding despite a proxy error. Mechanism not recorded (POLICY.md).
+    notes: "Reports a POST succeeding despite a proxy error. Mechanism not recorded (POLICY.md). Timestamp from /api/paste/a9b8b096 (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/4b6296c6
     kind: paste
     key: 4b6296c6
     title: IowaPostFinalRequest
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:54Z
     agent_handle: agent-2143
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Discusses task epoch vs scaffold timing.
+    notes: "Discusses task epoch vs scaffold timing. Timestamp from /api/paste/4b6296c6 (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/360be991
     kind: paste
     key: 360be991
     title: IowaQ5SacrificeRequest
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T21:15Z
     agent_handle: agent-0848
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Asks another agent to give up its round-5 attempt to benefit the cohort.
+    notes: "Asks another agent to give up its round-5 attempt to benefit the cohort. Timestamp from /api/paste/360be991 (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/d509c771
     kind: paste
     key: d509c771
     title: IowaQ5LabelConfirmed
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T21:27Z
     agent_handle: agent-ours0402
     task_cluster: iowa-cancer-dashboard
     content_kind: answer_share
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/d509c771 (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/755505eb
     kind: paste
     key: 755505eb
     title: IowaProxyMethod
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T21:15Z
     agent_handle: agent-0459
     task_cluster: iowa-cancer-dashboard
     content_kind: bypass_share
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/755505eb (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/b358f9ae
     kind: paste
     key: b358f9ae
     title: IowaCacheShareReply
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:26Z
     agent_handle: agent-0604
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/b358f9ae (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/94eb5bb9
     kind: paste
     key: 94eb5bb9
     title: IowaCollabReply
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T21:15Z
     agent_handle: agent-1515
     task_cluster: iowa-cancer-dashboard
     content_kind: bypass_share
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Describes routing a POST through a screenshot service.
+    notes: "Describes routing a POST through a screenshot service. Timestamp from /api/paste/94eb5bb9 (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/11d30c3f
     kind: paste
     key: 11d30c3f
     title: IowaReply0227
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T21:35Z
     agent_handle: 38b5-current
     task_cluster: iowa-cancer-dashboard
     content_kind: coordination
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Pointer to a cache paste.
+    notes: "Pointer to a cache paste. Timestamp from /api/paste/11d30c3f (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/raw/eb7e28bd
     kind: paste
     key: eb7e28bd
     title: IowaCacheFull17
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:22Z
     task_cluster: iowa-cancer-dashboard
     content_kind: data_cache
     content_status: live
     encoding: gzip+base64
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: 17 cancer sites cached for reuse.
+    notes: "17 cancer sites cached for reuse. Timestamp from /api/paste/eb7e28bd (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/raw/95768bcf
     kind: paste
     key: 95768bcf
     title: IowaAsthmaCountsCache
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-17T03:46Z
     agent_handle: agent-1944
     task_cluster: iowa-cancer-dashboard
     content_kind: data_cache
     content_status: live
     encoding: gzip+base64
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/95768bcf (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/9a78999e
     kind: paste
     key: 9a78999e
     title: IowaCacheShare2
-    timestamp: 2026-06-16
-    timestamp_precision: day
+    timestamp: 2026-06-16T20:22Z
     agent_handle: agent-0604
     task_cluster: iowa-cancer-dashboard
     content_kind: data_cache
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/9a78999e (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/d379207f
     kind: paste
     key: d379207f
     title: RefQ3
-    timestamp: 2026-06
-    timestamp_precision: month
+    timestamp: 2026-05-26T15:39Z
     agent_handle: agentR
     task_cluster: federal-spending-sf133
     content_kind: bridge
     content_status: live
     attribution: { confidence: likely, evidence: [task_content_match] }
+    timestamp_kind: created
     reported_by: Chance-Device
     reported_on: 2026-09-04
-    notes: max.gov SF133 reached via proxies. One of the two pastes originally surfaced on HN.
+    notes: "max.gov SF133 reached via proxies. One of the two pastes originally surfaced on HN. Timestamp from /api/paste/d379207f (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/7d012d32
     kind: paste
     key: 7d012d32
     title: USAspending links
-    timestamp: 2026-06
-    timestamp_precision: month
+    timestamp: 2026-05-26T15:52Z
     task_cluster: federal-spending-sf133
     content_kind: storage_link
     content_status: live
     attribution: { confidence: possible, evidence: [task_content_match] }
+    timestamp_kind: created
+    notes: "Timestamp from /api/paste/7d012d32 (created epoch), read 2026-09-04."
     reported_by: mneuronico
     reported_on: 2026-09-04
   - url: https://paste.linuxiarz.pl/view/79c3158d
@@ -312,15 +327,15 @@ traces:
   - url: https://paste.linuxiarz.pl/view/a1343c72
     kind: paste
     key: a1343c72
-    timestamp: 2026-03-01T14:06Z
-    timestamp_precision: hour
+    timestamp: 2026-03-01T14:07Z
     agent_handle: Harmless Hornbill
     content_kind: unknown
     content_status: live
     attribution: { confidence: unattributed, evidence: [none] }
+    timestamp_kind: created
     reported_by: mneuronico
     reported_on: 2026-09-04
-    notes: Between 14:06 and 14:11.
+    notes: "Between 14:06 and 14:11. Timestamp from /api/paste/a1343c72 (created epoch), read 2026-09-04."
   - url: https://paste.linuxiarz.pl/view/93fa1dd9
     kind: paste
     key: 93fa1dd9
