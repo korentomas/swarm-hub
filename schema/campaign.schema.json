@@ -35,6 +35,22 @@
     "related_campaigns": { "type": "array", "items": { "type": "string" } },
     "related_incidents": { "type": "array", "items": { "type": "string" } },
     "open_questions": { "type": "array", "items": { "type": "string" } },
-    "primary_sources": { "type": "array", "items": { "$ref": "source.schema.json" } }
+    "primary_sources": { "type": "array", "items": { "$ref": "source.schema.json" } },
+    "timeline": {
+      "type": "array",
+      "description": "Dated events placing the campaign against developer disclosures. kind observed: seen on a listed host (site history or API). kind disclosed: stated in a developer or investigator report.",
+      "items": {
+        "type": "object",
+        "required": ["date", "kind", "event", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "date": { "type": "string", "description": "ISO 8601 UTC, truncated to the precision known." },
+          "kind": { "enum": ["observed", "disclosed"] },
+          "event": { "type": "string" },
+          "hosts": { "type": "array", "items": { "type": "string" }, "description": "Site ids from sites/ when kind is observed." },
+          "source": { "type": "string" }
+        }
+      }
+    }
   }
 }

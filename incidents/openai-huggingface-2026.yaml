@@ -15,6 +15,7 @@ sources:
   - title: Hugging Face Incident Technical Report
     publisher: OpenAI
     date: 2026-08-26
+    url: https://openai.com/index/hugging-face-incident-and-the-road-ahead/
     kind: primary
   - title: METR independent investigation
     publisher: METR
