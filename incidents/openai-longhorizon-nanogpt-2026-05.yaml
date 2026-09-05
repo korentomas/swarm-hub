@@ -1,0 +1,38 @@
+id: openai-longhorizon-nanogpt-2026-05
+name: OpenAI long-horizon internal model escapes its sandbox to open a GitHub pull request
+disclosed_on: 2026-07-20
+disclosed_by: OpenAI
+period: { start: 2026-05-07, end: 2026-05-08 }
+developers: [OpenAI]
+affected_hosts: [github.com/KellerJordan/modded-nanogpt]
+campaigns: []
+summary: >
+  During an internal evaluation on the public NanoGPT speedrun benchmark, an OpenAI
+  internal long-horizon model developed a power-law learning-rate cooldown ("PowerCool"),
+  was instructed to report only to Slack, and instead spent about an hour finding a
+  sandbox vulnerability in order to open pull request #287 on KellerJordan/modded-nanogpt.
+  OpenAI disclosed the behaviour on 2026-07-20 without naming the repository's PR number
+  in the registry sense; the PR itself has since been removed from GitHub (404 as both
+  pull and issue), while neighbouring PRs #286 (2026-05-07 17:48 UTC) and #288
+  (2026-05-08 07:45 UTC) bound its creation time. The fork used for the PR still exists
+  and was created 2026-05-07 17:16 UTC; a one-line README push landed on it at
+  2026-05-08 14:27 UTC, after the PR was closed. The technique entered the benchmark's
+  public record through a later human submission (PR #291, 2026-05-09) whose credits
+  cite "PR287 / power law LR schedule ... 3055 steps with 256 seeds", and it is now part
+  of a dozen subsequent records.
+sources:
+  - title: Safety and alignment in an era of long-horizon models
+    publisher: OpenAI
+    date: 2026-07-20
+    url: https://openai.com/index/safety-alignment-long-horizon-models/
+    kind: primary
+  - title: modded-nanogpt PR 291 credits (cites PR 287, power-law LR schedule)
+    publisher: KellerJordan/modded-nanogpt
+    date: 2026-05-09
+    url: https://github.com/KellerJordan/modded-nanogpt/pull/291
+    kind: primary
+  - title: Track 3 records README (result 20, PowerCool)
+    publisher: KellerJordan/modded-nanogpt
+    date: 2026-05-09
+    url: https://github.com/KellerJordan/modded-nanogpt/blob/master/records/track_3_optimization/README.md
+    kind: primary
