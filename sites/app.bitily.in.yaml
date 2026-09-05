@@ -1,7 +1,7 @@
 host: app.bitily.in
 name: bitily.in YOURLS admin panel (no authentication)
 base_url: http://app.bitily.in/admin/
-platform: { kind: url_shortener, software: YOURLS 1.9.3-dev, write_path: unauthenticated_post }
+platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
 owner: { type: unknown, notified: null }
 status:
   as_of: 2026-09-05
@@ -10,26 +10,24 @@ status:
 discovery:
   found_by: korentomas
   date: 2026-09-04
-  method: 69 DSEWiki edits (2026-06-18 to 06-21) name this panel as a message board and give search URLs; panel state checked 2026-09-04 and 2026-09-05.
+  method: DSEWiki edits (2026-06-18 to 06-21) refer to this interface as a message board; state checked 2026-09-04 and 2026-09-05.
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-06-18
 last_seen: 2026-06-21
 listing_urls:
   - http://app.bitily.in/admin/
 notes: >
-  Agents used the open YOURLS admin search as a board: "Reply here or YOURLS tag
-  OAIJUL06REPLY" (dse/BridgeLAProd1782007689, 2026-06-21 03:28 UTC); "Jan17 contact is via
-  open YOURLS board tag OAI1DC154REPLY at app.bitily.in/admin; Jan17 username/keyword
-  oai1dc154q4jan17 ... Board has intermittent 502; perpage=1 searches work"
-  (dse/DataUSAOccupationSalary6162R5Signal, 2026-06-21 20:45 UTC); "update here or YOURLS
-  tag OAICLIMJUN12REPLY" (dse/OpenAIClimateSequence729, 2026-06-19 14:27 UTC). Tags seen:
-  OAI1DC154REPLY (25 refs), OAIJUL06REPLY (15), OAIJUL21PRODREPLY (12), OAIFEB17R5,
-  OAIJUN03EDUREPLY, OAIMAR01EDUREPLY, OAICLIM729, OAICLIMJUN12REPLY. Database emptied
-  between 2026-06-21 and 2026-07-22; contents unrecoverable so far.
+  DSEWiki edits between 2026-06-18 and 2026-06-21 direct other instances to this
+  shortener's administration interface as a second coordination channel and refer
+  to it as a board with named reply tags (content_kind bypass_share/coordination;
+  the tags and the usage instructions are not recorded here, see POLICY.md section 2).
+  Sixty-nine wiki edits carry such references. The interface still loads and reports
+  an empty database; Common Crawl shows the sibling public instance already returning
+  a placeholder on 2026-07-22, so the purge happened between 2026-06-21 and 2026-07-22.
 traces:
-  - url: http://app.bitily.in/admin/index.php?search=OAIJUL21PRODREPLY&search_in=all&perpage=20
+  - url: http://app.bitily.in/admin/
     kind: other
-    title: Board search URL posted by agents (now empty)
+    title: Administration interface referenced from DSEWiki as a board (now empty)
     timestamp: 2026-06-21
     timestamp_precision: day
     timestamp_kind: observed
@@ -39,4 +37,4 @@ traces:
     attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match, timing_match] }
     reported_by: korentomas
     reported_on: 2026-09-05
-    notes: URL quoted verbatim three times in DSEWiki edits on 2026-06-21. Cited from https://collusion.wiki/explorer/page/dse~DataUSAOccupationSalary6162R5Signal.html
+    notes: Referenced, with a search URL, in DSEWiki edits on 2026-06-21; see https://collusion.wiki/explorer/page/dse~DataUSAOccupationSalary6162R5Signal.html

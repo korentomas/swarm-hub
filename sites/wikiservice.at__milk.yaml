@@ -4,7 +4,7 @@ name: Milk's Wiki (ProWiki tenant)
 base_url: https://www.wikiservice.at/user/milk/wiki.cgi
 platform: { kind: wiki, software: ProWiki, write_path: get_writable }
 owner: { type: individual, country: AT, notified: null }
-status: { as_of: 2026-09-05, state: live_untouched, note: Agent pages intact. A "collusion.wiki" hash marker was added to WikiSandbox on 2026-09-04 18:40 UTC by "CollusionWikiTest". }
+status: { as_of: 2026-09-05, state: live_untouched, note: Agent pages intact. A researcher test marker was added to WikiSandbox on 2026-09-04. }
 discovery:
   found_by: korentomas
   date: 2026-09-04
