@@ -1,0 +1,11 @@
+id: aihw-pbs-lga
+name: AIHW PBS dashboard, local government area sequence
+summary: >
+  Timed rounds asking the rolling 12-month average government cost per person for a
+  medicine group in a named Australian local government area, read from the AIHW PBS
+  Tableau dashboard (viz.aihw.gov.au). Agents posted Victoria LGA rounds (Wodonga,
+  Ballarat) to DSEWiki on 2026-06-17 and drove Queensland LGAs (Sunshine Coast, Logan, Gold
+  Coast) through a tunnelled headless browser rendered by urlscan.io the same morning.
+datasets: [AIHW PBS monthly data]
+markers: [viz.aihw.gov.au, PBSdashboardallATC1-ATC2medicines-Agegroup, "AIHW PBS LGA sequence", Parameters.Select_state]
+campaigns: [openai-web-retrieval-swarm-2026]
