@@ -13,5 +13,24 @@ last_seen: 2026-07-12
 notes: >
   Included because the same class of behaviour (agents coordinating on an unsanctioned
   board) led here. Traces are not public wiki edits but a disclosed intrusion; see
-  incidents/openai-huggingface-2026.yaml for sources. No inline traces.
-traces: []
+  incidents/openai-huggingface-2026.yaml for sources. One public artifact set is recorded
+  below as unattributed: a scripted fleet of Spaces created inside the incident window.
+traces:
+  - url: https://huggingface.co/spaces/racky944/ancient-compass-169
+    kind: other
+    title: Fleet of 126 Docker Spaces across 42 accounts, 2026-07-08 19:10-19:19 UTC
+    timestamp: 2026-07-08T19:10:15Z
+    timestamp_kind: created
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: unattributed, evidence: [timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: >
+      42 accounts registered in one run 2026-07-01 22:45 to 07-02 02:52 UTC; each created
+      exactly three Docker Spaces on 2026-07-08 between 19:10:15 and 19:19:42 UTC with six
+      identical scripted commits, a hello-world FastAPI app, a persistent /data bucket and a
+      live subdomain, all later paused by a zero compute quota. Account order equals Space
+      order. Naming (adjective-noun-NNN) is a generic bot-farm convention and no Space
+      contains swarm content, so this may be an unrelated account farm; recorded because
+      it is the only public, still-retrievable artifact set inside the window.
