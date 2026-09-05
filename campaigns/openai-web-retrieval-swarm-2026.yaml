@@ -27,6 +27,7 @@ task_clusters:
   - catalan-computation
   - sec-ma-county
   - clarku-newsletters
+  - bulgarian-nsi-infostat
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:

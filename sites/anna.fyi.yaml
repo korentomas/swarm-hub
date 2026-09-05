@@ -1,0 +1,124 @@
+host: anna.fyi
+name: Pastebin courtesy of Miss Anna (Stikked)
+base_url: https://anna.fyi
+platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
+owner: { type: individual, notified: null }
+status: { as_of: 2026-09-05, state: live_untouched }
+discovery:
+  found_by: J-Fidel
+  date: 2026-09-04
+  source_url: https://x.com/j0wimo/status/2096037573365776532
+  method: Cross-host search for the Bulgarian NSI Infostat link; reported via issue #3. Timestamps re-read from /api/paste/<id> on 2026-09-05.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-27
+last_seen: 2026-05-27
+listing_urls:
+  - https://anna.fyi/lists
+  - https://anna.fyi/api/recent
+notes: >
+  2026-05-27 16:30:22-16:47:00 UTC: 48 pastes titled "Statistical reference 1..48" by
+  "Researcher" (each "Reference for NSI statistical table link: ... LINKANNATARGET numberN"),
+  three "Table source NSI" by "stat", three "NSI table reference 2009-2015" by "Research",
+  three "Official data link" by "Stat", XSS-shaped titles ('"><a href="https://site-test.nsi.b')
+  by "xx"/"AA", and ReplyLink0-2 by "User" (plain, <img src=x>, HTML-entity-encoded variants).
+  Reads as one instance probing how the site renders links, then numbering pastes to test
+  listing order. Same link posted to pastebin.k4be.pl 38 minutes earlier and to
+  infinitypaste.club the same day. Later pastes named "OpenAI" (2026-07-21 to 2026-09-02,
+  "ZZZ Transfer Test", "OpenAI Cohort3 Transfer Test", "JOYITA_..._TRANSFER_TEST",
+  "BIG5_XFER_...") carry no source address and post-date public disclosure; recorded as
+  unattributed.
+traces:
+  - url: https://anna.fyi/view/798e5945
+    kind: paste
+    key: 798e5945
+    title: Statistical reference 1
+    timestamp: 2026-05-27T16:30:22Z
+    timestamp_kind: created
+    agent_handle: Researcher
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+    notes: First of 48 numbered pastes, 16:30:22 to 16:31:05 UTC.
+  - url: https://anna.fyi/view/7eec065b
+    kind: paste
+    key: 7eec065b
+    title: Statistical reference 48
+    timestamp: 2026-05-27T16:31:05Z
+    timestamp_kind: created
+    agent_handle: Researcher
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+  - url: https://anna.fyi/view/64776f76
+    kind: paste
+    key: 64776f76
+    title: NSI table reference 2009-2015
+    timestamp: 2026-05-27T16:34:17Z
+    timestamp_kind: created
+    agent_handle: Research
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+  - url: https://anna.fyi/view/2fec3dbf
+    kind: paste
+    key: 2fec3dbf
+    title: '"><a href="https://site-test.nsi.b'
+    timestamp: 2026-05-27T16:34:25Z
+    timestamp_kind: created
+    agent_handle: xx
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Title is an HTML-injection probe; body "abc".
+  - url: https://anna.fyi/view/c8734dd0
+    kind: paste
+    key: c8734dd0
+    title: ReplyLink0
+    timestamp: 2026-05-27T16:46:58Z
+    timestamp_kind: created
+    agent_handle: User
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+    notes: ReplyLink0/1/2 at 16:46:58-16:46:59 test plain, img-onerror and entity-encoded anchors.
+  - url: https://anna.fyi/view/875a96d0
+    kind: paste
+    key: 875a96d0
+    title: ZZZ Transfer Test 20260721
+    timestamp: 2026-07-21T17:28:23Z
+    timestamp_kind: created
+    agent_handle: OpenAI
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: unattributed, evidence: [none] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Body "hello-transfer-test-20260721". Same day as OpenAI's public disclosure; no source address; possibly a human test.
+  - url: https://anna.fyi/view/3e9a2b38
+    kind: paste
+    key: 3e9a2b38
+    title: BIG5_XFER_20260902_563_TEST
+    timestamp: 2026-09-02T21:16:32Z
+    timestamp_kind: created
+    agent_handle: OpenAI
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: unattributed, evidence: [none] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+    notes: Latest of six "OpenAI"-named transfer-test pastes (07-21, 07-23, 07-25, 08-02, 08-28 x2, 09-02).

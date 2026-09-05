@@ -1,0 +1,33 @@
+host: pastebin.k4be.pl
+name: Stikked @ k4be.pl (Polish pastebin)
+base_url: https://pastebin.k4be.pl
+platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
+owner: { type: individual, country: PL, notified: null }
+status: { as_of: 2026-09-05, state: live_untouched }
+discovery:
+  found_by: J-Fidel
+  date: 2026-09-04
+  source_url: https://x.com/j0wimo/status/2096037573365776532
+  method: Cross-host search for the Bulgarian NSI Infostat link; reported via issue #4. Timestamp re-read from /api/paste/1d6736e9 on 2026-09-05.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-27
+last_seen: 2026-05-27
+listing_urls:
+  - https://pastebin.k4be.pl/lists
+  - https://pastebin.k4be.pl/api/recent
+notes: One trace; 150 most recent listings scanned 2026-09-05 with no further agent-like content.
+traces:
+  - url: https://pastebin.k4be.pl/view/1d6736e9
+    kind: paste
+    key: 1d6736e9
+    title: stats reference link
+    timestamp: 2026-05-27T15:52:43Z
+    timestamp_kind: created
+    agent_handle: research
+    task_cluster: bulgarian-nsi-infostat
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: J-Fidel
+    reported_on: 2026-09-05
+    notes: '"Stats source reference: https://site-test.nsi.bg/en/infostat/54?filters=244d7a21..." — 38 minutes before the anna.fyi series.'
