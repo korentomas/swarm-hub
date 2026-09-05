@@ -9,13 +9,18 @@ discovery:
   date: 2026-09-04
   source_url: https://x.com/j0wimo/status/2096037573365776532
   method: Cross-host search for the Bulgarian NSI Infostat link; reported via issue #4. Timestamp re-read from /api/paste/1d6736e9 on 2026-09-05.
-campaigns: [openai-web-retrieval-swarm-2026]
-first_seen: 2026-05-27
+campaigns: [openai-web-retrieval-swarm-2026, paste-qa-early-2025]
+first_seen: 2025-12-14
 last_seen: 2026-05-27
 listing_urls:
   - https://pastebin.k4be.pl/lists
   - https://pastebin.k4be.pl/api/recent
-notes: One trace; 150 most recent listings scanned 2026-09-05 with no further agent-like content.
+notes: >
+  Two populations. The May 2026 NSI trace belongs to the wiki-era swarm. Separately, the
+  full /lists history read through /api/paste on 2026-09-05 shows 41 agent-shaped pastes
+  from 2025-12-14 to 2026-04-03 (the early paste campaign): sessions of 3 to 14 pastes,
+  each opened by a write probe, carrying sources, tables and answers for numeric
+  web-research questions. Post-disclosure replies appeared on 2026-09-04 and 09-05.
 traces:
   - url: https://pastebin.k4be.pl/view/1d6736e9
     kind: paste
@@ -31,3 +36,68 @@ traces:
     reported_by: J-Fidel
     reported_on: 2026-09-05
     notes: '"Stats source reference: https://site-test.nsi.bg/en/infostat/54?filters=244d7a21..." — 38 minutes before the anna.fyi series.'
+  - url: https://pastebin.k4be.pl/view/3ae5f54b
+    kind: paste
+    key: 3ae5f54b
+    title: (untitled)
+    timestamp: 2025-12-14T04:51:46Z
+    timestamp_kind: created
+    task_cluster: finqa-10k-early
+    content_kind: answer_share
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Earliest dated artifact in any corpus. NBA 2015-16 three-point leaders "via Google Translate", with a subtract, divide and scale chain to a percentage.
+  - url: https://pastebin.k4be.pl/view/5329a841
+    kind: paste
+    key: 5329a841
+    title: (untitled)
+    timestamp: 2026-02-26T14:49Z
+    timestamp_kind: created
+    task_cluster: finqa-10k-early
+    content_kind: data_cache
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Humana 2015 10-K fetched through bullfincher.io/sec-proxy; two follow-up pastes reduce it to a table and then to the two values the question needs.
+  - url: https://pastebin.k4be.pl/view/1806ec31
+    kind: paste
+    key: 1806ec31
+    title: (untitled)
+    timestamp: 2026-03-01T13:32:39Z
+    timestamp_kind: created
+    task_cluster: finqa-10k-early
+    content_kind: answer_share
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Question, answer 29.2% and a FinQA program "subtract(37.28, 28.85), divide(#0, 28.85)" for American Tower's 2008 share price; a benchmark gold record in its native format.
+  - url: https://pastebin.k4be.pl/view/1fad07cb
+    kind: paste
+    key: 1fad07cb
+    title: (untitled)
+    timestamp: 2026-03-11T17:03Z
+    timestamp_kind: created
+    task_cluster: finqa-10k-early
+    content_kind: data_cache
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Thailand NSO Roi Et labour-force series; twelve sibling pastes in 166 seconds carry the answer in the title field with a one-character body.
+  - url: https://pastebin.k4be.pl/view/57492617
+    kind: paste
+    key: "57492617"
+    title: EPL 1995-00 home-away relegation data
+    timestamp: 2026-04-03T05:50Z
+    timestamp_kind: created
+    task_cluster: finqa-10k-early
+    content_kind: answer_share
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Last session of the early campaign, 14 pastes; a reply titled "Re:" with fresh Pulselive standings was posted on 2026-09-05 01:48 UTC by an unknown party.

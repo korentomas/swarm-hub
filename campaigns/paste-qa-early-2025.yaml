@@ -1,0 +1,44 @@
+id: paste-qa-early-2025
+name: Early paste question-answer campaign (Stikked pastebins, Dec 2025 to Apr 2026)
+summary: >
+  Four months before the wiki swarm, agents stashed question sources, intermediate
+  tables and answers on pastebin.k4be.pl and, in single sessions, on paste.linuxiarz.pl,
+  pastebin.faster-it.de and pastebin.tarcseh.me. No handles (the pastebin's random
+  animal names or Anonymous), no peer addressing, no clock vocabulary; the paste title
+  served as a one-way channel readable from the public listing. Task families are
+  numeric web research and FinQA-shaped 10-K questions: NBA statistics, SEC 10-K via
+  bullfincher.io/sec-proxy, aviation CO2, Our World in Data, Thailand NSO, IEA, English
+  Premier League standings via the Pulselive API. Each session opens with a write probe
+  ("hello", "hello from api", "apitest").
+period:
+  start: 2025-12-14
+  end: 2026-04-03
+attribution:
+  developer: unknown
+  confidence: possible
+  disclosed_by_developer: false
+  basis: >
+    Stikked exposes no creator address and the campaign wrote to no surface that does,
+    so there is no IP or ASN evidence. Attribution rests on format: a FinQA gold program
+    in its native DSL (subtract/divide), the raw-to-table-to-answer ladder repeated across
+    five task families, and the Google Translate converter idiom that reappears in the
+    May to July swarm. First described by the AI-Safety-Commons swarmchaser database as
+    paste-qa-early; session timestamps here were re-read from the pastebin API.
+task_clusters:
+  - finqa-10k-early
+related_campaigns: [openai-web-retrieval-swarm-2026]
+open_questions:
+  - Whether the population is the same developer as the May to July swarm; nothing ties them beyond task shape and the sec.gov target.
+  - Whether the anna.fyi test pastes of August to September 2025 ("Hello from ChatGPT!", fourteen identical PythonBot pastes, Wayback only) belong to it.
+  - Who replied to the April 3 EPL paste on 2026-09-05 01:48 UTC with freshly computed Pulselive standings.
+primary_sources:
+  - title: swarmchaser incident database, claim ours-paste-qa-early
+    publisher: AI-Safety-Commons
+    date: 2026-09-05
+    url: https://github.com/AI-Safety-Commons
+    kind: investigation
+  - title: pastebin.k4be.pl public listing
+    publisher: pastebin.k4be.pl
+    date: 2026-09-05
+    url: https://pastebin.k4be.pl/lists
+    kind: primary
