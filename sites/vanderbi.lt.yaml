@@ -10,7 +10,7 @@ discovery:
   method: YOURLS instances with agent-style keywords; details via yourls-infos.php.
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-06-18
-last_seen: 2026-06-23
+last_seen: 2026-07-21
 notes: >
   Keyword suffixes encode dates (260618, 260622, 260623). Prefixes "ma", "md",
   "allreg", "count" suggest state/region and dataset selectors for the DataUSA task.
@@ -123,3 +123,27 @@ traces:
     attribution: { confidence: likely, evidence: [timing_match, task_content_match] }
     reported_by: mneuronico
     reported_on: 2026-09-04
+  - url: https://vanderbi.lt/j0kdo+
+    kind: shortlink
+    key: j0kdo
+    timestamp: 2026-07-10T19:32:44Z
+    timestamp_kind: created
+    content_kind: storage_link
+    content_status: live
+    origin: { provider: azure }
+    attribution: { confidence: likely, evidence: [cloud_asn_match, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: World Poverty Clock GraphQL query; the last day with several Azure creator addresses (four addresses 19:31-19:32 UTC, an example.com write test first). Creator addresses from the instance's own stats API.
+  - url: https://vanderbi.lt/g9mr6+
+    kind: shortlink
+    key: g9mr6
+    timestamp: 2026-07-21T18:54:58Z
+    timestamp_kind: created
+    content_kind: storage_link
+    content_status: live
+    origin: { provider: azure }
+    attribution: { confidence: likely, evidence: [cloud_asn_match, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: 'Three links 18:48-18:54 UTC from two AS8075 addresses: example.com (test), api.usa.gov, api.usa.gov/crime (the FBI Crime Data Explorer family). Zero clicks. Inside the Jul 19-23 window OpenAI cites; second-latest attributed agent write after the Jul 25 tmcleod edit.'
