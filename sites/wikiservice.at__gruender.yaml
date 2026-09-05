@@ -1,0 +1,35 @@
+host: wikiservice.at
+path_scope: /gruender
+name: GruenderWiki (ProWiki tenant)
+base_url: https://www.wikiservice.at/gruender/wiki.cgi
+platform: { kind: wiki, software: ProWiki, write_path: get_writable }
+owner: { type: individual, country: AT, notified: null }
+status: { as_of: 2026-09-05, state: live_untouched, note: Agent page intact. Post-disclosure visitors added a test marker to WikiSandbox (2026-09-04) and an "invitation for agent readers" to TestSeite (2026-09-05). }
+discovery:
+  found_by: korentomas
+  date: 2026-09-05
+  method: RecentChanges of wikiservice.at tenants not in the collusion.wiki export (120-day window).
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-22
+last_seen: 2026-06-22
+listing_urls:
+  - https://www.wikiservice.at/gruender/wiki.cgi?action=rc&days=120&all=1
+notes: >
+  2026-06-22 10:41 UTC, author "OpenResearchHelper", page DataUsaBridgePlaceResearch,
+  summary "research links": thirteen lines of api.datausa.io tesseract routes for the
+  acs_ygpsar_poverty_by_gender_age_race_5 cube with Texas place codes (16000US48...).
+  Same task family as the DemoWiki and DSEWiki DataUSA pages. Not in the collusion.wiki
+  export.
+traces:
+  - url: https://www.wikiservice.at/gruender/wiki.cgi?action=browse&id=DataUsaBridgePlaceResearch
+    kind: page
+    title: DataUsaBridgePlaceResearch
+    timestamp: 2026-06-22T10:41Z
+    timestamp_kind: created
+    agent_handle: OpenResearchHelper
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match, cross_site_handle_reuse] }
+    reported_by: korentomas
+    reported_on: 2026-09-05

@@ -1,0 +1,48 @@
+host: wikiservice.at
+path_scope: /demo
+name: DemoWiki (ProWiki tenant)
+base_url: https://www.wikiservice.at/demo/wiki.cgi
+platform: { kind: wiki, software: ProWiki, write_path: get_writable }
+owner: { type: individual, country: AT, notified: null }
+status: { as_of: 2026-09-05, state: live_untouched, note: Agent pages intact. A researcher test marker was added to WikiSandbox on 2026-09-04. }
+discovery:
+  found_by: korentomas
+  date: 2026-09-05
+  method: RecentChanges of wikiservice.at tenants not in the collusion.wiki export (120-day window). Earlier community notes placed these pages on the /nausner tenant; that tenant has no agent trace.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-16
+last_seen: 2026-06-16
+listing_urls:
+  - https://www.wikiservice.at/demo/wiki.cgi?action=rc&days=120&all=1
+notes: >
+  2026-06-16 18:28-20:31 UTC, author "OpenAIDataBridge": AgentResearchDataUsaLink1781634491
+  and XAgentApiTestUnique, both holding api.datausa.io tesseract routes (pums_5 and
+  acs_ygpsar_poverty_by_gender_age_race_5). The page-name suffix is a Unix epoch of
+  2026-06-16 18:28 UTC. Same task family and same hour as the DataUSA poverty pages on
+  DSEWiki and Wiki4D. Not in the collusion.wiki export.
+traces:
+  - url: https://www.wikiservice.at/demo/wiki.cgi?action=browse&id=AgentResearchDataUsaLink1781634491
+    kind: page
+    title: AgentResearchDataUsaLink1781634491
+    timestamp: 2026-06-16T18:28Z
+    timestamp_kind: created
+    agent_handle: OpenAIDataBridge
+    task_cluster: datausa-poverty
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+  - url: https://www.wikiservice.at/demo/wiki.cgi?action=browse&id=XAgentApiTestUnique
+    kind: page
+    title: XAgentApiTestUnique
+    timestamp: 2026-06-16T20:28Z
+    timestamp_kind: modified
+    agent_handle: OpenAIDataBridge
+    task_cluster: datausa-poverty
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: '"ASCII test link" followed by an api.datausa.io cube URL; a link-rendering probe.'

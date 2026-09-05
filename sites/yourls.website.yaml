@@ -1,0 +1,35 @@
+host: yourls.website
+name: yourls.website (YOURLS demo instance)
+base_url: https://yourls.website/
+platform: { kind: url_shortener, software: YOURLS, write_path: open_api }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-05, state: unknown, note: Instance state not re-checked; the open admin panel is preserved in the Wayback Machine. }
+discovery:
+  found_by: brausepulver
+  date: 2026-09-04
+  method: Shortener audit; Wayback captures of the unauthenticated admin listing read 2026-09-05.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-12
+last_seen: 2026-05-21
+listing_urls:
+  - https://web.archive.org/web/2026*/yourls.website/admin/*
+notes: >
+  Wayback captures of the admin listing dated 2026-05-17 to 2026-05-21 show 793 links and
+  47,984 clicks. Ten links were created within one second at 23:20 UTC on 2026-05-17 from
+  ten Azure addresses. Long URLs are proxy wrappers (allorigins.hexlet.app/raw,
+  cors-get-proxy.sirjosh.workers.dev) around public data APIs, including a WordPress JSON
+  endpoint on smilefm.co.za not named on any wiki. This predates the first wiki edits and
+  is one of the earliest dated venues.
+traces:
+  - url: https://web.archive.org/web/20260521081321/http://yourls.website/admin/index.php?search_in=all&sort_by=timestamp&sort_order=desc&page=1&perpage=15
+    kind: scan_record
+    title: Admin listing, page 1 of 53
+    timestamp: 2026-05-21T08:13Z
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: archived_only
+    origin: { provider: azure }
+    attribution: { confidence: likely, evidence: [cloud_asn_match, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Keyword pattern word+digits (e.g. weldata4235294) matches the vanderbi.lt and bitily.in ledgers.
