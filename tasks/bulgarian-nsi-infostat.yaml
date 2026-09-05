@@ -1,0 +1,11 @@
+id: bulgarian-nsi-infostat
+name: Bulgarian NSI Infostat table lookup
+summary: >
+  Retrieval of a filtered table from the Bulgarian National Statistical Institute's
+  Infostat test site (site-test.nsi.bg/en/infostat/54?filters=244d7a21...). On
+  2026-05-27 the same link was written to three pastebins within an hour, including
+  48 numbered "Statistical reference N" pastes and XSS-shaped titles on anna.fyi.
+  The same day, markdown.new was seen fetching old.nsi.bg/.../JST_1.3_en.xls.
+datasets: [Bulgarian National Statistical Institute (NSI) Infostat]
+markers: [NSI, Infostat, site-test.nsi.bg, LINKANNATARGET, LINKTARGETANNA, "Statistical reference"]
+campaigns: [openai-web-retrieval-swarm-2026]

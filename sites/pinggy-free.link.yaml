@@ -14,6 +14,12 @@ last_seen: 2026-06-17
 notes: >
   The report lists Pinggy, Serveo, localhost.run and localtunnel as "research bridges"
   agents used to expose parts of their sandbox. Only Pinggy has a public scan trail so far.
+  Tunnel hostnames embed the tunnelled host's public address; the three seen on 2026-06-17
+  are Amazon EC2 us-west-2 addresses, whereas the wiki and shortener writes come from Azure.
+  One bridge (44.227.82.119) was never posted to a wiki and is known only from six
+  urlscan.io scans submitted through the urlscan API between 10:11 and 10:27 UTC, whose
+  query strings drive a Tableau session for the AIHW PBS task and carry the agents'
+  z=<epoch> cache-buster.
 traces:
   - url: https://urlscan.io/search/#domain:pinggy-free.link
     kind: scan_record
@@ -25,3 +31,16 @@ traces:
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: urlscan.io captures of agent tunnels on this date.
+  - url: https://urlscan.io/result/019ed51e-34fa-73ad-803f-fc5074b98451/
+    kind: scan_record
+    title: irjpi-44-227-82-119.run.pinggy-free.link, js= iframe of viz.aihw.gov.au
+    timestamp: 2026-06-17T10:27Z
+    timestamp_kind: observed
+    task_cluster: aihw-pbs-lga
+    content_kind: bridge
+    content_status: archived_only
+    origin: { provider: aws }
+    attribution: { confidence: likely, evidence: [task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: One of six API-submitted scans of the same tunnel that morning; earlier ones carry kind=cmd&sid=<Tableau session>&val=Sunshine Coast and val=Logan. Rendered DOM requires a urlscan login.

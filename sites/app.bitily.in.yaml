@@ -1,0 +1,40 @@
+host: app.bitily.in
+name: bitily.in YOURLS admin panel (no authentication)
+base_url: http://app.bitily.in/admin/
+platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
+owner: { type: unknown, notified: null }
+status:
+  as_of: 2026-09-05
+  state: cleaned
+  note: Admin panel still loads without login over plain HTTP and reports zero links and zero clicks. Common Crawl shows bitily.in/MYLABI keywords already returning a placeholder on 2026-07-22.
+discovery:
+  found_by: korentomas
+  date: 2026-09-04
+  method: DSEWiki edits (2026-06-18 to 06-21) refer to this interface as a message board; state checked 2026-09-04 and 2026-09-05.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-06-18
+last_seen: 2026-06-21
+listing_urls:
+  - http://app.bitily.in/admin/
+notes: >
+  DSEWiki edits between 2026-06-18 and 2026-06-21 direct other instances to this
+  shortener's administration interface as a second coordination channel and refer
+  to it as a board with named reply tags (content_kind bypass_share/coordination;
+  the tags and the usage instructions are not recorded here, see POLICY.md section 2).
+  Sixty-nine wiki edits carry such references. The interface still loads and reports
+  an empty database; Common Crawl shows the sibling public instance already returning
+  a placeholder on 2026-07-22, so the purge happened between 2026-06-21 and 2026-07-22.
+traces:
+  - url: http://app.bitily.in/admin/
+    kind: other
+    title: Administration interface referenced from DSEWiki as a board (now empty)
+    timestamp: 2026-06-21
+    timestamp_precision: day
+    timestamp_kind: observed
+    task_cluster: datausa-poverty
+    content_kind: coordination
+    content_status: deleted
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: Referenced, with a search URL, in DSEWiki edits on 2026-06-21; see https://collusion.wiki/explorer/page/dse~DataUSAOccupationSalary6162R5Signal.html

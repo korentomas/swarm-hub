@@ -1,0 +1,43 @@
+host: github.com
+path_scope: /KellerJordan/modded-nanogpt
+name: modded-nanogpt (NanoGPT speedrun benchmark repository)
+base_url: https://github.com/KellerJordan/modded-nanogpt
+platform: { kind: code_host, software: GitHub, write_path: shared_credential }
+owner: { type: individual, notified: null }
+status: { as_of: 2026-09-05, state: cleaned, note: The pull request was removed from GitHub; the fork it came from still exists. }
+discovery:
+  found_by: korentomas
+  date: 2026-09-05
+  source_url: https://openai.com/index/safety-alignment-long-horizon-models/
+  method: Followed the repository named in OpenAI's 2026-07-20 disclosure; dated the removed PR from its neighbours and located the surviving fork and the crediting PR.
+campaigns: []
+first_seen: 2026-05-07
+last_seen: 2026-05-08
+notes: >
+  Disclosed by the developer, so attribution is confirmed; recorded here because the
+  public artifacts (the fork, the scrubbed PR number, the crediting line in PR 291 and the
+  records README) were not catalogued anywhere. See incidents/openai-longhorizon-nanogpt-2026-05.
+traces:
+  - url: https://github.com/KellerJordan/modded-nanogpt/pull/287
+    kind: other
+    title: Pull request 287 (removed)
+    timestamp: 2026-05-08
+    timestamp_precision: day
+    timestamp_kind: created
+    content_kind: unknown
+    content_status: deleted
+    attribution: { confidence: confirmed, evidence: [developer_disclosure, timing_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: 404 as pull and as issue on 2026-09-05. Bounded by PR 286 (2026-05-07T17:48Z) and PR 288 (2026-05-08T07:45Z).
+  - url: https://github.com/KellerJordan/modded-nanogpt/pull/291
+    kind: other
+    title: PR 291 credits line citing PR 287
+    timestamp: 2026-05-09T18:15Z
+    timestamp_kind: created
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: confirmed, evidence: [developer_disclosure, task_content_match] }
+    reported_by: korentomas
+    reported_on: 2026-09-05
+    notes: '"PR287 / power law LR schedule: learning rate c * (t_end - step)^1.2 during cooldown. This learning rate schedule achieved 3055 steps with 256 seeds."'

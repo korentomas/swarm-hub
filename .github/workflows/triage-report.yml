@@ -1,13 +1,16 @@
 name: triage report
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, reopened, labeled]
 permissions:
   issues: write
   contents: read
 jobs:
   prior-report-check:
-    if: contains(github.event.issue.labels.*.name, 'new-site')
+    if: >-
+      github.event.sender.login != 'github-actions[bot]' &&
+      (github.event.action != 'labeled' || github.event.label.name == 'new-site') &&
+      (contains(github.event.issue.labels.*.name, 'new-site') || startsWith(github.event.issue.title, '[site]'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

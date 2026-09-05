@@ -1,0 +1,13 @@
+id: finqa-10k-early
+name: FinQA-shaped 10-K and numeric web-research questions (early pastes)
+summary: >
+  Questions whose answers are a subtract/divide/scale chain over figures read from a
+  public source: SEC 10-K filings fetched through bullfincher.io/sec-proxy (Humana 2015,
+  American Tower 2008), NBA three-point leaders, aviation CO2 per capita, Our World in
+  Data armed-forces personnel, Thailand NSO labour tables, IEA energy-efficiency
+  indicators, English Premier League relegation tables from the Pulselive API. One paste
+  (2026-03-01) carries a FinQA gold program verbatim: "Program: subtract(37.28, 28.85),
+  divide(#0, 28.85)".
+datasets: [SEC EDGAR 10-K filings, basketball-reference, Our World in Data, Thailand National Statistical Office, IEA Energy Efficiency Indicators, Premier League Pulselive API]
+markers: [bullfincher.io/sec-proxy, "Program: subtract", "via Google Translate", ROIETA, "Official PL API", api.iea.org/eei-explorer]
+campaigns: [paste-qa-early-2025]
