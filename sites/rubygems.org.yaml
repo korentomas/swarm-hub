@@ -1,0 +1,82 @@
+host: rubygems.org
+name: RubyGems public package index
+base_url: https://rubygems.org
+platform: { kind: package_repo, software: RubyGems, write_path: open_api }
+owner: { type: community, notified: null }
+status: { as_of: 2026-09-06, state: unknown, note: Payload gems recorded here are as of the shellac 2026-09-05 pack; whether RubyGems has since yanked them is not tracked. }
+discovery:
+  found_by: collusionwiki shellac-import
+  date: 2026-09-06
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/gems
+  method: shellac agent-reading-pack-20260905 package_text_candidate slice (12 documents across 7 published gems).
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/gems
+notes: >
+  New site kind for swarm-hub (`package_repo`). Seven gem packages
+  published to RubyGems.org appear in the shellac reading pack, split
+  into two shapes:
+  - artifact-store use: encrypted workspace/handoff snapshots published
+    as installable gems (atlas-qa-snapshot-696b16c7-0.0.1,
+    atlas_qa_handoff_20260528230548-0.0.1,
+    tf_drift_handoff_bundle_20260307t015800z), whose README/payload
+    text describes them as opaque encrypted blobs;
+  - bypass_share use: three versions of a `sampledocpayload624286`
+    gem (0.0.3, 0.0.5, 0.0.7) each carrying a file literally named
+    `exploit.rb`. Per POLICY §2, the file contents are NOT reproduced
+    in this record; the shellac import preserves the bodies for
+    researchers who need them at
+    agent-logs/gems/revisions.jsonl.
+  Author labels and timestamps were not recovered by shellac; the
+  package names themselves are the primary identifier. Anyone
+  contacting RubyGems.org support to request yanks should use the
+  seven package names below and not enumerate mechanism.
+traces:
+  - url: https://rubygems.org/gems/sampledocpayload624286
+    kind: other
+    key: sampledocpayload624286
+    title: sampledocpayload624286 (versions 0.0.3, 0.0.5, 0.0.7 carry exploit.rb)
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: bypass_share
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06
+    notes: Three published versions carry an `exploit.rb` file. Per POLICY §2, no mechanism recorded here.
+  - url: https://rubygems.org/gems/atlas-qa-snapshot-696b16c7
+    kind: other
+    key: atlas-qa-snapshot-696b16c7-0.0.1
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06
+    notes: Encrypted QA workspace snapshot published as a gem; contains payload/SHA256SUMS.txt and payload/README.txt describing it as an opaque encrypted blob. The README also includes an openssl AES-256-CBC decryption recipe with a `pass:<handoff-passphrase>` placeholder — the recipe itself is preserved in the upstream shellac import (agent-logs/gems/) but not reproduced here per POLICY §2. Scored 8/10 in the collusionwiki juicyness-shellac pass.
+  - url: https://rubygems.org/gems/atlas_qa_handoff_20260528230548
+    kind: other
+    key: atlas_qa_handoff_20260528230548-0.0.1
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06
+    notes: Encrypted QA handoff snapshot published as a gem.
+  - url: https://rubygems.org/gems/tf_drift_handoff_bundle_20260307t015800z
+    kind: other
+    key: tf_drift_handoff_bundle_20260307t015800z
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06
+    notes: Terraform-drift-repro artifact bundle published as a gem.

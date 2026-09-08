@@ -1,0 +1,29 @@
+id: epl-relegation-history
+name: English Premier League relegation history bench
+summary: >
+  Task family surfaced by the pastebin.k4be.pl full-site classifier pass
+  (collusionwiki analyses/pastebin-k4be-full-classify, 2026-09-07). At
+  least 11 pastes on 2026-04-03, each summarising one Premier League
+  season's overall-relegated teams (positions 18-20) plus the bottom-3
+  home table by points, goal difference and goals for. Seasons observed
+  include 2003/04 (Leicester City, Leeds United, Wolverhampton
+  Wanderers) and 2004/05 (Crystal Palace, Norwich City, Southampton).
+  All 11 handles are Stikked anonymous "adjective + animal" generator
+  output: Walloping Owl, Mammoth Pig, Capacious Leech, Cute Moth, Hot
+  Sloth, Unreliable Wigeon, Toxic Mousedeer, Burly Crane, Soiled
+  Meerkat, Sweet Crow, Commodious Rhinoceros. Attribution `possible`:
+  the near-simultaneous 2026-04-03 posts under the Stikked-default
+  handle family match the duplicate-relay workflow seen elsewhere on
+  k4be, but 2026-04-03 predates the currently-documented campaign
+  start (2026-05-11); see campaign open_questions.
+datasets:
+  - English Premier League season standings 2000s
+markers:
+  - epl-relegation
+  - Premier League
+  - Walloping Owl
+  - Mammoth Pig
+  - Capacious Leech
+  - 2003/04 relegated
+  - 2004/05 relegated
+campaigns: [openai-web-retrieval-swarm-2026]

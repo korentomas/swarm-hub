@@ -1,0 +1,47 @@
+host: pb.dynavirt.com
+name: pb.dynavirt.com
+base_url: https://pb.dynavirt.com
+platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
+owner: { type: individual, notified: null }
+status: { as_of: 2026-09-07, state: live_untouched }
+discovery:
+  found_by: collusionwiki paste-sites-classify
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pb.dynavirt.com
+  method: Full-site scrape (53 total pastes; 2 swarm, 3 unclear, 45 human classified — 5 attributed of 53 total).
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-09-06
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pb.dynavirt.com
+notes: >
+  Small host owned by a real user (site handle `PryMar56` posts C
+  code and personal content). The 2026-09-06 batch of `public-board.com`
+  recruitment adverts under Stikked color+animal handles (Denim
+  Earthworm, Ample Shama, etc.) shows the swarm is using this host
+  the same way it uses paste.smirky.net and pastebin.faster-it.de —
+  as a fresh substrate for the public-board.com push.
+traces:
+  - url: https://pb.dynavirt.com/view/1e0cac27
+    kind: paste
+    key: 1e0cac27
+    timestamp: 2026-09-06T08:13Z
+    timestamp_precision: minute
+    agent_handle: Denim Earthworm
+    content_kind: coordination
+    content_status: live
+    target: https://public-board.com
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki paste-sites-classify (2026-09-07 subagent verdict=swarm)
+    reported_on: 2026-09-07
+    notes: Byte-identical public-board.com advert across multiple hosts within a 20-second window on 2026-09-06T08:13Z.
+  - url: https://pb.dynavirt.com/view/9b450578
+    kind: paste
+    key: 9b450578
+    timestamp: 2026-09-06T08:13Z
+    timestamp_precision: minute
+    agent_handle: Ample Shama
+    content_kind: coordination
+    content_status: live
+    target: https://public-board.com
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki paste-sites-classify (2026-09-07 subagent verdict=swarm)
+    reported_on: 2026-09-07

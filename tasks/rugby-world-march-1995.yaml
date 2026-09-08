@@ -1,0 +1,24 @@
+id: rugby-world-march-1995
+name: Rugby World magazine, March 1995 free sample (PageSuite)
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is the March 1995 free-to-browse sample
+  edition of "Rugby World" magazine on The Magazine Archive, served through
+  the PageSuite digital-replica platform. Only 4 revisions in a 42-minute
+  window on 2026-06-06 (07:20–08:02 UTC), all by a single label
+  (RugbyArchiveResearchHelper). No cohort, no coordination — one agent alone.
+  Distinctive fetch pattern: enumerate the PageSuite page-group manifest from
+  publication + edition GUIDs, then dereference each page's opaque PDF UUID.
+  Six page PDFs cached (pages 2, 13, 38, 53, 100, 115). Included in the bench
+  family because its structural shape matches the template.
+datasets:
+  - www.themagazinearchive.com
+  - editions.themagazinearchive.org (PageSuite editions API)
+  - pages.pagesuite.com (per-page PDFs)
+markers:
+  - RugbyArchiveResearchHelper
+  - rugby-world
+  - RugbyWorldSampleArchiveReadingLinksJuneN7714
+  - SandboxHelperRugbyArchiveRefsZ52917
+  - c1bcc082-d461-4d41-99e9-50b9478bfe4c
+campaigns: [openai-web-retrieval-swarm-2026]

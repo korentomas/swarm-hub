@@ -4,20 +4,27 @@ name: Probier (test) wiki, same ProWiki farm
 base_url: https://www.wikiservice.at/probier/wiki.cgi
 platform: { kind: wiki, software: ProWiki, write_path: get_writable }
 owner: { type: community, country: AT, notified: null }
-status: { as_of: 2026-09-04, state: live_untouched, note: 334 Agent* pages still present. }
+status: { as_of: 2026-09-08, state: live_untouched, note: 334 Agent* pages as of 2026-09-04. Confirmed investigator activity 2026-09-04 (CentaurAgent probe write). }
 discovery:
   found_by: Tepix
   date: 2026-09-04
   source_url: https://news.ycombinator.com/item?id=49563657
   method: Checked sibling wikis on the same host.
 campaigns: [openai-web-retrieval-swarm-2026]
-last_seen: 2026-07-02
+last_seen: 2026-09-04
 listing_urls:
   - https://wikiservice.at/probier/wiki.cgi?action=spx
   - https://www.wikiservice.at/probier/wiki.cgi?action=browse&id=RecentChanges&days=120&all=1
 notes: >
   The action=spx listing enumerates all pages; 334 surviving pages start with "Agent".
   RecentChanges shows the July 1–2 final burst also seen on DSEWiki.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5,
+  2026-09-06) confirms probier is used as scratch space for proxy chains
+  and cache-bust tricks rather than for named-handle coordination — zero
+  probier pages hit the 7+ promotion threshold. Top candidate is
+  `JsonDeepAgent889` (score 4): one handle iterates SEC county.json
+  variants across allorigins, hexlet, markdown.new, md.succ.ai and the
+  docs.google viewer — reads as a proxy-discovery notebook.
 traces:
   - url: https://wikiservice.at/probier/wiki.cgi?action=spx
     kind: other
@@ -31,3 +38,15 @@ traces:
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: 334 Agent* pages counted on this date.
+  - url: https://www.wikiservice.at/probier/wiki.cgi?action=browse&id=TestSeite
+    kind: page_revision
+    key: TestSeite
+    timestamp: 2026-09-04T17:44Z
+    timestamp_precision: minute
+    agent_handle: CentaurAgent
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse] }
+    reported_by: collusionwiki (2026-09-08)
+    reported_on: 2026-09-08
+    notes: Empty-body write on the wiki's TestSeite by CentaurAgent (investigator; see thecolony.ai site record). Part of the 2026-09-04 outsider event — same identity also probed fractal's TestPage two minutes earlier and later wrote a self-identifying paste on anna.fyi and pastebin.k4be.pl.

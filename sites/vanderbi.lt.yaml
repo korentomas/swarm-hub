@@ -3,7 +3,7 @@ name: Vanderbilt University URL shortener
 base_url: https://vanderbi.lt
 platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
 owner: { name: Vanderbilt University, type: university, country: US, notified: null }
-status: { as_of: 2026-09-04, state: live_untouched }
+status: { as_of: 2026-09-06, state: live_untouched }
 discovery:
   found_by: mneuronico
   date: 2026-09-04
@@ -14,6 +14,11 @@ last_seen: 2026-06-23
 notes: >
   Keyword suffixes encode dates (260618, 260622, 260623). Prefixes "ma", "md",
   "allreg", "count" suggest state/region and dataset selectors for the DataUSA task.
+  Independent corroboration (2026-09-06): the shellac
+  agent-reading-pack-20260905 shortener_candidate slice identifies 3,043
+  candidate documents grouped under this host — by far the largest shortener
+  in that pack (single heaviest body is `vanderbi-lt/iyg1y` with 2,151
+  revisions). Full dataset at github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners.
 traces:
   - url: https://vanderbi.lt/yourls-infos.php?id=maallraw260618
     kind: shortlink

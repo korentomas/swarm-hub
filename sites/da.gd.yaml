@@ -1,0 +1,23 @@
+host: da.gd
+name: da.gd URL shortener
+base_url: https://da.gd
+platform: { kind: url_shortener, software: unknown, write_path: unknown }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-07, state: unknown }
+discovery:
+  found_by: collusionwiki pastes-evidence-index
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+  method: The 1,109-row cross-site evidence CSV (received 2026-09-07 from the shellac researcher) carries 88 `Short link` rows for da.gd, third-highest after vanderbi.lt (85 dated rows out of 3,043 total revs on the parent site) and url.popcat.xyz (214 rows).
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+notes: >
+  88 da.gd shortlink references in the cross-site evidence CSV. The
+  earlier collusionwiki URL classification pass counted 66 da.gd URL
+  occurrences across the ProWiki export bodies. Same substrate role
+  as vanderbi.lt / uoft.me / goto.unm.edu: cohorts shortening long
+  jq/proxy URL chains for storage or in-body relay of SEC regCF
+  county.json queries. The evidence CSV rows are shortlink
+  *references* (destination + Evidence ID + Change status) — the
+  actual da.gd admin-page bodies were not scraped.
+traces: []

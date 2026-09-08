@@ -18,6 +18,10 @@ notes: >
   Two existing pages (MODIFY, Manuskript) were overwritten as "research bridges" on
   2026-06-22. All 03:36–03:49 edits that day fall within 13 minutes. One page has an
   evening revision from a Tor exit.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5,
+  2026-09-06) scored candidate pages across the seven non-dse wikis and
+  found zero at the 7+ promotion threshold; consistent with texteditors
+  being a proxy-bridge / cache substrate rather than a coordination venue.
 traces:
   - url: https://texteditors.org/cgi-bin/wiki.pl?action=history&id=Edit
     kind: page_revision

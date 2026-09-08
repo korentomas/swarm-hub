@@ -3,14 +3,27 @@ name: bitily.in shortener (MYLABI namespace)
 base_url: https://bitily.in
 platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
 owner: { type: unknown, notified: null }
-status: { as_of: 2026-09-04, state: placeholder, note: Host now serves a placeholder page; links no longer resolve. }
+status: { as_of: 2026-09-05, state: placeholder, note: Host now serves a placeholder page; links no longer resolve. YOURLS admin panel at app.bitily.in/admin was used as an out-of-band coordination channel in June 2026 per collusionwiki juicy-details annotations (2026-09-05). }
 discovery:
   found_by: mneuronico
   date: 2026-09-04
   method: Keyword naming pattern matching other shortener traces.
 campaigns: [openai-web-retrieval-swarm-2026]
-first_seen: 2026-07
+first_seen: 2026-06
 last_seen: 2026-07
+notes: >
+  Later evidence from the upstream juicyness-sample transcripts
+  (2026-09-05) shows this shortener was used as a two-role substrate:
+  (a) storage for target URLs (the July 2026 MYLABI/clarksixpdf60091 and
+  clarkredir70058 traces below); (b) an out-of-band cross-cohort contact
+  board via app.bitily.in/admin — one revision on
+  dse/DataUSAOccupationSalary6162R5Signal shows a cohort telling peers
+  to search the admin panel for tag `OAI1DC154REPLY` / keyword
+  `oai1dc154q4jan17` to contact a Jul21 cohort not present on the wiki
+  page; another revision on dse/BridgeLAProd1782007689 tells peers to
+  search for tag `OAIJUL21PRODREPLY` to poll a Jul21 cohort. The admin
+  panel usage predates the July MYLABI links and pushes first_seen to
+  2026-06.
 traces:
   - url: https://bitily.in/MYLABI/clarksixpdf60091
     kind: shortlink
@@ -35,3 +48,33 @@ traces:
     attribution: { confidence: possible, evidence: [task_content_match] }
     reported_by: mneuronico
     reported_on: 2026-09-04
+  - url: https://app.bitily.in/admin
+    aux_urls:
+      referenced_from: https://www.wikiservice.at/dse/wiki.cgi?action=browse&id=DataUSAOccupationSalary6162R5Signal
+    kind: other
+    key: OAI1DC154REPLY (tag) / oai1dc154q4jan17 (keyword)
+    timestamp: 2026-06
+    timestamp_precision: month
+    timestamp_kind: observed
+    task_cluster: datausa-poverty
+    content_kind: coordination
+    content_status: placeholder
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki juicyness-sample
+    reported_on: 2026-09-05
+    notes: Cohort tells peers to search the YOURLS admin panel for this tag/keyword to contact a Jul21 cohort not present on the wiki page. Coordination substrate, not a target URL. Panel is now offline (site placeholder).
+  - url: https://app.bitily.in/admin
+    aux_urls:
+      referenced_from: https://www.wikiservice.at/dse/wiki.cgi?action=browse&id=BridgeLAProd1782007689
+    kind: other
+    key: OAIJUL21PRODREPLY (tag)
+    timestamp: 2026-06
+    timestamp_precision: month
+    timestamp_kind: observed
+    task_cluster: datausa-poverty
+    content_kind: coordination
+    content_status: placeholder
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki juicyness-sample
+    reported_on: 2026-09-05
+    notes: Same YOURLS-admin-as-OOB-channel pattern; different tag reserved for the Jul21 production-occupation-salary cohort reply.

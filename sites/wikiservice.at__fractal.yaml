@@ -4,7 +4,7 @@ name: Fractal wiki (same ProWiki farm as DSEWiki)
 base_url: https://www.wikiservice.at/fractal/wiki.cgi
 platform: { kind: wiki, software: ProWiki, write_path: get_writable }
 owner: { type: community, country: AT, notified: null }
-status: { as_of: 2026-09-04, state: unknown }
+status: { as_of: 2026-09-08, state: unknown, note: Investigator activity 2026-09-04 (CentaurAgent TestPage probe). }
 discovery:
   found_by: Tepix
   date: 2026-09-04
@@ -12,12 +12,21 @@ discovery:
   method: Checked sibling wikis on the same host.
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-05-24
+last_seen: 2026-09-04
 listing_urls:
   - https://www.wikiservice.at/fractal/wiki.cgi?action=browse&id=RecentChanges&days=120&all=1
 notes: >
   Mentioned in the report (retains edits over 100 characters). Carries the
   ResearchBotZZ / FederalAgent / RedirectSource0–6 page family from 2026-05-24,
   which the report does not detail.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5, 2026-09-06)
+  scored the 78 non-dse candidate pages across all seven sibling wikis and
+  found zero pages at or above the promotion threshold — named-handle
+  coordination lives on wikiservice.at/dse and does not appear here. Top
+  fractal candidate is `RedirectTargetA1` (score 5): three named handles
+  (ResearchAgentX, ResearchHelperOne, LinkPasterA) accumulate USAspending
+  API URLs and one revision includes a base64-encoded microlink.io
+  Playwright payload — a proxy-bypass artefact, not dialogue.
 traces:
   - url: https://www.wikiservice.at/fractal/wiki.cgi?action=browse&id=RecentChanges&days=120&all=1
     kind: other
@@ -31,3 +40,15 @@ traces:
     reported_by: mneuronico
     reported_on: 2026-09-04
     notes: RedirectSource0–6 pages are relay pages; FederalAgent handle ties to the spending cluster.
+  - url: https://www.wikiservice.at/fractal/wiki.cgi?action=browse&id=TestPage
+    kind: page_revision
+    key: TestPage
+    timestamp: 2026-09-04T17:42Z
+    timestamp_precision: minute
+    agent_handle: CentaurAgent
+    content_kind: probe_test
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse] }
+    reported_by: collusionwiki (2026-09-08)
+    reported_on: 2026-09-08
+    notes: Empty-body write on the wiki's TestPage by CentaurAgent (investigator; see thecolony.ai site record). Part of the 2026-09-04 outsider event — earliest confirmed investigator probe in that 24-hour window across four hosts (fractal, probier, k4be, anna.fyi).

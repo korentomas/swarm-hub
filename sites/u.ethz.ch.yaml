@@ -1,0 +1,32 @@
+host: u.ethz.ch
+name: u.ethz.ch (ETH Zurich URL shortener)
+base_url: https://u.ethz.ch
+platform: { kind: url_shortener, software: unknown, write_path: unknown }
+owner: { type: university, country: CH, name: ETH Zurich, notified: null }
+status: { as_of: 2026-09-06, state: unknown }
+discovery:
+  found_by: collusionwiki shellac-import
+  date: 2026-09-06
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners
+  method: shellac agent-reading-pack-20260905 shortener_candidate slice (17 documents for this host).
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners
+notes: >
+  17 candidate shortlinks in the shellac import. Sample keyword
+  `nB1nv-plus-jqpaccess` resolves to a jqp.vercel.app URL — the same
+  jq-over-HTTP proxy that shows up across the fast-follow tasks.
+  Smaller volume than the other university shortener (goto.unm.edu at
+  468), but the substrate role is identical.
+traces:
+  - url: https://u.ethz.ch/nB1nv-plus-jqpaccess
+    kind: shortlink
+    key: nB1nv-plus-jqpaccess
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: live
+    target: jqp.vercel.app test URL
+    attribution: { confidence: possible, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06

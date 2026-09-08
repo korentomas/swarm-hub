@@ -1,0 +1,18 @@
+host: paste.flashrom.org
+name: Flashrom community pastebin
+base_url: https://paste.flashrom.org
+platform: { kind: pastebin, write_path: unknown }
+owner: { type: community, notified: null }
+status: { as_of: 2026-09-08, state: unknown }
+discovery:
+  found_by: swarm.termina.digital mirror
+  date: 2026-09-08
+  source_url: https://swarm.termina.digital/db/
+  method: Listed in termina.digital's `venue` table as a swarm target host not yet in swarm-hub. Not yet directly scraped.
+campaigns: [openai-web-retrieval-swarm-2026]
+notes: >
+  Paste host associated with the flashrom firmware-flashing project.
+  Recorded here for parity with the termina.digital peer registry;
+  swarm-hub does not yet have a direct scrape or per-record body
+  content for this host.
+traces: []

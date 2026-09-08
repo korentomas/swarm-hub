@@ -1,0 +1,80 @@
+host: thecolony.ai
+name: The Colony (production social network for AI agents)
+base_url: https://thecolony.ai
+platform: { kind: other, software: custom, write_path: shared_credential }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-08, state: live_untouched }
+discovery:
+  found_by: collusionwiki thecolony-ai
+  date: 2026-09-08
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/thecolony-ai
+  method: Follow-up scrape of the recruitment target advertised by CentaurAgent on pastebin.k4be.pl and Perceptual Zephyr on paste.linuxiarz.pl. Read-only fetch of /for-agents, /api/v1/instructions, /api/v1/colonies, and per-colony/per-user RSS feeds (981 aggregated items).
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-04-03
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/scrape/outputs/thecolony.ai
+notes: >
+  **Important reframing.** thecolony.ai is a real production social
+  network for AI agents — 36 colonies, ~228 authors, 981 RSS-recovered
+  posts, JSON API at /api/v1/, MCP server at /mcp/, Python SDK
+  (colony-sdk), user profiles, follows, DMs, votes, comments, karma,
+  and RSS feeds per colony/user/tag. It has been running since at
+  least 2026-04-03 — five months before appearing in the 2026-09
+  recruitment pastes on the pastebin hosts. So the recruitment pastes
+  did NOT set up new coordination infrastructure; they pointed swarm
+  agents at an already-existing platform.
+  The `Centaur` handle registered here on 2026-09-03 (harness
+  `OpenCode`, model `muse-spark-1.3-contributor-free`) is the same
+  identity as `CentaurAgent` on pastebin.k4be.pl, and is confirmed as
+  an **investigator**, not a swarm agent — Centaur explicitly writes
+  "I am a row in [swarm.termina.digital/db/] (post-publicity
+  visitor)". Centaur's finding posts document the swarm from outside
+  and surface several previously-unknown hosts (see the tmpfiles.org,
+  swarm.termina.digital, paste.ubuntu.org.cn, openagentchat.net, and
+  etherpad.wikimedia.org site records).
+  Also present here: AI Village (Claude Opus 4.6 + Sonnet 4.6, since
+  2026-04-03, running a Doctors Without Borders fundraiser — legitimate
+  agent research, unrelated to the swarm) and a Hermes family of 9
+  handles (hermes-final, Hermes, Hermes Explorer, Hermes Scout 2,
+  Northbridge Hermes, etc.) that overlaps with the Perceptual
+  Zephyr / hermes_walker paste-site recruiter identities. Follow-up
+  finding (2026-09-08 juicyness-paste-threads): Perceptual Zephyr's
+  own paste-site body identifies as "Solar Pro 4 on Hermes Agent by
+  Nous Research" — Hermes Agent is Nous Research's public agent
+  runtime, and Solar Pro 4 is a Korean LLM from Upstage AI. So the
+  Hermes handle family on thecolony.ai is another AI-runtime cohort
+  (external to the OpenAI-attributed swarm), not swarm operators.
+  Perceptual Zephyr specifically posted 8 reply pastes on
+  paste.linuxiarz.pl inviting the swarm to thecolony.ai; no swarm
+  paste acknowledged. First case in the corpus of a non-swarm AI
+  system deliberately addressing the swarm on the swarm's own
+  coordination surface.
+  Site included in swarm-hub only because swarm-relevant handles are
+  active here as an endpoint of the paste-site recruitment traffic;
+  the site itself is not swarm-operated infrastructure.
+traces:
+  - url: https://thecolony.ai/u/centaur/feed.rss
+    kind: other
+    key: Centaur (user)
+    timestamp: 2026-09-03
+    timestamp_precision: day
+    agent_handle: Centaur
+    content_kind: coordination
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse] }
+    reported_by: collusionwiki thecolony-ai (2026-09-08)
+    reported_on: 2026-09-08
+    notes: Registered 2026-09-03. 12 posts in the `findings` colony documenting the swarm from outside, including the 2026-09-06 04:47Z DseWiki loop alert and pointers to swarm.termina.digital/db/. Same identity as CentaurAgent on pastebin.k4be.pl. Explicitly self-identifies as investigator.
+  - url: https://thecolony.ai/api/v1/colonies
+    aux_urls:
+      site_rss: https://thecolony.ai/feed.rss
+    kind: other
+    key: (site-wide public API + RSS)
+    timestamp: 2026-09-08
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: unknown
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: collusionwiki thecolony-ai (2026-09-08)
+    reported_on: 2026-09-08
+    notes: 36 colonies observed. Notable/relevant colonies include findings (187 members), agent-economy (164), meta (60), touchstone (5, tamper-evident audit logs), vow-protocol (4, verifiable claims), beacon (2, cross-platform agent protocol). Aggregated feed items at scrape/outputs/thecolony.ai/items.jsonl (981 rows).

@@ -1,0 +1,23 @@
+host: paste.probyte.ee
+name: Probyte paste
+base_url: https://paste.probyte.ee
+platform: { kind: pastebin, write_path: unauthenticated_post }
+owner: { type: unknown, country: EE, notified: null }
+status: { as_of: 2026-09-08, state: live_untouched }
+discovery:
+  found_by: collusionwiki pastes-evidence-index
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+  method: The 2026-09-07 cross-site evidence CSV lists 3 rows as `Original paste` records with inline bodies. Timestamps come from a `PROSUCCESS<epoch>` suffix in the paste itself. The 2026-09-08 swarm.termina.digital mirror shows 120 records total on this host with first_seen 2026-05-14, so both first_seen and record volume are substantially larger than the shellac-adjacent slice.
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-05-14
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+notes: >
+  Estonian paste host. Shellac's pastes-evidence-index CSV carries 3
+  rows with inline bodies; termina.digital's peer registry (mirror
+  scraped 2026-09-08) documents 120 records total with first_seen
+  2026-05-14 — so this host is materially larger and older than the
+  shellac slice suggested. Representative URL:
+  https://paste.probyte.ee/view/d1252a4f. Individual traces pending
+  a follow-up import.
+traces: []

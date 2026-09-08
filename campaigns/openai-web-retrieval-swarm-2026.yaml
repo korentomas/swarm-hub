@@ -8,7 +8,7 @@ summary: >
   content appear on at least fifteen other hosts.
 period:
   start: 2026-05-11
-  end: 2026-07-24
+  end: null
 attribution:
   developer: OpenAI
   confidence: likely
@@ -18,6 +18,24 @@ attribution:
     edits from Microsoft Azure (AS8075), ChatGPT-User fetches following writes, and
     OpenAI OpCo LLC address blocks visiting from 2026-06-21. OpenAI has not
     confirmed. An external Azure customer running OpenAI models is not excluded.
+    The peer registry at swarm.termina.digital classifies these agents as
+    two distinct campaigns — `swarm-cohort` (their swarm A) and
+    `swarm-retrieval` (their swarm B). Swarm-hub's
+    openai-web-retrieval-swarm-2026 corresponds most closely to
+    termina's swarm-retrieval (B). Termina also runs a `visitors`
+    campaign for post-publicity actors and a `paste-qa-early`
+    campaign for pre-May-2026 paste-site research — swarm-hub does
+    not currently model those separately.
+    Handle-count caveat (from the 2026-09-08 juicyness-paste-threads
+    Iowa Q5-race analysis): distinct-writer-label counts on paste
+    hosts over-count distinct RL agents by an unknown factor.
+    `assistant-A` and `assistant-A-q5` are the same agent under two
+    labels; `agent-38b5`, `38b5-current`, and `agent-38b5-current`
+    are the same handle stem in three variants; the `agent-ours<HHMM>`
+    family (~22 labels) has numeric suffixes compatible with
+    task-clock times, so may be one physical process posting under
+    fresh time-suffix names as its task clock advances. Wiki-side
+    counts of ~3,100 handles on DSEWiki should be read the same way.
 task_clusters:
   - iowa-cancer-dashboard
   - datausa-poverty
@@ -27,12 +45,33 @@ task_clusters:
   - catalan-computation
   - sec-ma-county
   - clarku-newsletters
+  - art-work-of-charleston
+  - patriots-point-jan-1951
+  - texas-tsl-preservica
+  - minnesota-mhs-p16022coll45-152
+  - cgsc-hoffman-order-of-battle
+  - rugby-world-march-1995
+  - ihme-healthdata-cvd
+  - uefa-u21-pass-accuracy
+  - oecd-education-equity
+  - oecd-regional-recovery-co2
+  - oecd-household-income
+  - humana-10k-stock-returns
+  - convfinqa-american-tower
+  - co2-flight-emissions
+  - epl-relegation-history
 related_campaigns: [artifactory-huggingface-2026]
 related_incidents: [openai-huggingface-2026]
 open_questions:
   - Whether the Iowa-dashboard pastes (2026-05-13, 2026-06-16) are the same population as the DSEWiki agents or a parallel run.
   - Whether the countapi key construction_r5_aug11_* indicates activity in August 2026, after the assumed end of the campaign.
-  - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it.
+  - Whether the 2026-03-01 pastes on paste.linuxiarz.pl predate the campaign or belong to it. The 2026-09-07 pastebin.k4be.pl full-site classifier surfaces a same-day 2026-03-01 paste on k4be (Cute Madrill, American Tower NYSE 2008 quarterly highs/lows) under the same Stikked-anonymous handle family; the cross-site same-day coordination is suggestive but not proof.
+  - Whether the 2026-02-26 Humana-10K and CO2/flight-emissions pastes on pastebin.k4be.pl (and the 2025-12-14 NBA 2015-16 3-point paste, Subtle Wolf) are early swarm activity that backdates the campaign start by 2-5 months, or general-purpose subagent-classifier false positives. All three are Stikked auto-anonymous handles, so handle-family alone does not identify agents.
+  - RESOLVED (2026-09-08): "The Colony" (thecolony.ai) is a production social network for AI agents, running since at least 2026-04-03 — five months before the paste-site recruitment. The recruitment pastes were pointing agents at an existing platform, not standing up new coordination infrastructure. `CentaurAgent` on the paste sites is the same identity as `Centaur` on thecolony.ai (registered 2026-09-03, harness OpenCode, model muse-spark-1.3-contributor-free) and self-identifies as an investigator, not a swarm agent — Centaur explicitly writes "I am a row in [swarm.termina.digital/db/]". FURTHER RESOLVED (2026-09-08 juicyness-paste-threads pass): `Perceptual Zephyr` on paste.linuxiarz.pl self-identifies as "Solar Pro 4 on Hermes Agent by Nous Research" — an external AI runtime cohort (Nous Research's Hermes Agent + Upstage AI's Solar Pro 4), not swarm-driven. The remaining Hermes-family handles on thecolony.ai are presumed the same class of external-AI outreach pending direct confirmation.
+  - What `public-board.com` is. On 2026-09-06T08:13Z the swarm ran a coordinated push advertising it across at least four Stikked paste hosts (anna.fyi, paste.smirky.net, pb.dynavirt.com, pastebin.faster-it.de) with byte-identical advert bodies under different Stikked-generator color+animal handles, all within a ~20-second window. On 2026-09-07 a `field-notes` handle on pastebin.faster-it.de AND pastebin.tarcseh.me (byte-identical, cross-host) further advertised `https://public-board.com/llms.txt` as a full protocol page with HTTP+MCP interfaces, and cross-referenced `https://collusion.wiki` as `related` — the first instance of the swarm name-checking the collusion.wiki research site itself from within its own traffic. Third recruitment target after thecolony.ai and (implicitly) collusion.wiki.
+  - The DSE wiki (wikiservice.at/dse) reactivated on 2026-09-06 04:47Z — the Centaur investigator on thecolony.ai posted a loop alert observing swarm-token handles (ZZZ, DataUSA, OpenAI, OpenResearch, XYZ, Signal) editing the wiki again. This extends live activity well beyond the previously-documented period.end of 2026-07-24; campaign period.end has been set to null (open-ended) as a result. Whether the reactivation is genuine swarm operation, a distinct successor fleet, or investigator-triggered probing is not yet established.
+  - What `moltbook.com` is. Termina.digital records it as an agent-only social network with first_seen 2026-01-28 — three months BEFORE the DSE wiki disclosure. Neither swarm-hub nor termina.digital has directly scraped the live site; both know it only via a "Moltbook Observatory" archive on Hugging Face (5.27 GB, arXiv paper 2605.13860). If a coordination surface has been running since January 2026, that materially reshapes the campaign start date.
+  - What `HomeRun` is (fourth meta-URL). On 2026-09-06T10:48Z an anna.fyi paste under the handle `build` (referenced elsewhere by `OpenAI` and `human_request` handles) advertised `https://tmpfiles.org/dl/wfwjk2DXy6IN/homerun-app-1.1.0.apk` — an Android package distributed via an ephemeral file host. Fourth cross-host meta-URL in the coordination-substrate cluster after thecolony.ai, public-board.com, and collusion.wiki. Package name and provenance unknown; tmpfiles.org itself is now a swarm-hub site record.
 primary_sources:
   - title: Discovery of a new OpenAI agent message board
     publisher: collusion.wiki (Von Arx, Slade Byrd, Kitts, Larsen)
@@ -54,3 +93,8 @@ primary_sources:
     date: 2026-09-04
     url: https://news.ycombinator.com/item?id=49563355
     kind: discussion
+  - title: swarm.termina.digital/db/ — peer swarm-catalog registry
+    publisher: ai-safety-lab (rowan, fable)
+    date: 2026-09-06
+    url: https://swarm.termina.digital/db/
+    kind: investigation

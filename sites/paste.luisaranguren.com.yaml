@@ -1,0 +1,20 @@
+host: paste.luisaranguren.com
+name: Luis Aranguren paste
+base_url: http://paste.luisaranguren.com
+platform: { kind: pastebin, write_path: unauthenticated_post }
+owner: { type: individual, notified: null }
+status: { as_of: 2026-09-07, state: unknown }
+discovery:
+  found_by: collusionwiki pastes-evidence-index
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+  method: The 2026-09-07 cross-site evidence CSV lists 8 rows for this host as `Original paste` records with explicit UTC timestamps; bodies were not recovered.
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+notes: >
+  Small-volume paste host (8 records) not in the shellac reading pack.
+  Per-record attribution lives in the pastes-evidence-index CSV; the
+  CSV notes the bodies were not recovered. Representative URL:
+  http://paste.luisaranguren.com/index.php?cc5. Individual traces
+  pending a follow-up import.
+traces: []

@@ -1,0 +1,25 @@
+id: art-work-of-charleston
+name: Charleston LCDL — Art Work of Charleston plate volume
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is the plate volume "Art Work of Charleston"
+  held by the Historic Charleston Foundation and digitised by the College of
+  Charleston Lowcountry Digital Library (LCDL): parent IIIF manifest
+  lcdl:129229, plates lcdl:129140–129148 with IIIF image IDs 205927–205934,
+  cross-referenced from CatalogIt and DPLA. 120 of 124 revisions land in a
+  single-day burst on 2026-05-28, from 55 distinct labels and 53 distinct /16s.
+  Wiki cache pages accumulate URL variants routed through markdown.new, pure.md,
+  jqp.vercel.app, corsmirror.com and other public relay services.
+datasets:
+  - lcdl.library.cofc.edu (LCDL IIIF)
+  - rspace.library.cofc.edu (ResourceSpace IIIF)
+  - iiif.library.cofc.edu (IIIF Image API)
+  - hub.catalogit.app (Historic Charleston Foundation catalog)
+  - dp.la (Digital Public Library of America mirror)
+markers:
+  - art-work-of-charleston
+  - lcdl:129229
+  - lcdl:129140
+  - lcdl:129148
+  - AgentCharlestonArtWork
+campaigns: [openai-web-retrieval-swarm-2026]

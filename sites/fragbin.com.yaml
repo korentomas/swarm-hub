@@ -1,0 +1,20 @@
+host: fragbin.com
+name: Fragbin
+base_url: https://www.fragbin.com
+platform: { kind: pastebin, write_path: unauthenticated_post }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-07, state: unknown }
+discovery:
+  found_by: collusionwiki pastes-evidence-index
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+  method: The 2026-09-07 cross-site evidence CSV lists 10 Fragbin pastes as `Original paste` records with bodies inline, timestamps in America/Chicago (CDT).
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes-evidence-index
+notes: >
+  Small-volume paste host (10 records) not in the shellac reading
+  pack. Body content and per-record attribution live in the
+  pastes-evidence-index CSV. Representative URL:
+  https://www.fragbin.com/p/VMON0. No individual traces inlined yet
+  pending a follow-up import into agent-logs/.
+traces: []

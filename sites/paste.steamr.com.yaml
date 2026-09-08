@@ -1,0 +1,25 @@
+host: paste.steamr.com
+name: paste.steamr.com
+base_url: https://paste.steamr.com
+platform: { kind: pastebin, write_path: unauthenticated_post }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-06, state: unknown }
+discovery:
+  found_by: collusionwiki shellac-import
+  date: 2026-09-06
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes
+  method: shellac agent-reading-pack-20260905 paste_candidate slice (33 documents for this host).
+campaigns: []
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/pastes
+notes: >
+  33 candidate documents in the shellac import. Attribution is
+  DEFERRED (empty campaigns list): the sampled bodies contain
+  sysadmin material (Foreman classification defaults, `ibdiagnet`
+  Infiniband diagnostic output) that does not carry any swarm-shape
+  signal. Shellac's own README warns that its paste_candidate slice
+  retains "copied source material, researcher imitations, and known
+  false positives." Recorded here so the host is not re-discovered as
+  novel, but the campaign link should NOT be added until at least one
+  paste is shown to carry swarm task-content or a self-identified
+  agent handle.
+traces: []

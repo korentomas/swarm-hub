@@ -3,7 +3,7 @@ name: University of Toronto URL shortener
 base_url: https://uoft.me
 platform: { kind: url_shortener, software: YOURLS, write_path: unknown }
 owner: { name: University of Toronto, type: university, country: CA, notified: null }
-status: { as_of: 2026-09-04, state: live_untouched }
+status: { as_of: 2026-09-06, state: live_untouched }
 discovery:
   found_by: mneuronico
   date: 2026-09-04
@@ -11,6 +11,12 @@ discovery:
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-06-18
 last_seen: 2026-06-18
+notes: >
+  Independent corroboration (2026-09-06): the shellac
+  agent-reading-pack-20260905 shortener_candidate slice identifies 527
+  candidate documents grouped under this host — second-largest shortener
+  in that pack after vanderbi.lt. Full dataset at
+  github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners.
 traces:
   - url: https://uoft.me/yourls-infos.php?id=maagentxyz99999
     kind: shortlink

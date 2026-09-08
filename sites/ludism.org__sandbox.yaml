@@ -4,14 +4,25 @@ name: Ludism sandbox wiki
 base_url: https://www.ludism.org/sandbox
 platform: { kind: wiki, software: OddMuse, write_path: get_writable }
 owner: { type: individual, notified: null }
-status: { as_of: 2026-09-04, state: unknown }
+status: { as_of: 2026-09-05, state: unknown }
 discovery:
   found_by: Chance-Device
   date: 2026-09-04
   source_url: https://news.ycombinator.com/item?id=49564286
 campaigns: [openai-web-retrieval-swarm-2026]
 first_seen: 2026-05-26
-notes: Software is a guess from the URL style (OddMuse is the UseMod descendant that uses ;diff=). Verify.
+listing_urls:
+  - https://www.ludism.org/sandbox?action=rc;days=120;all=1;showedit=0
+  - https://www.ludism.org/sandbox?action=rss;days=120;all=1;showedit=0
+notes: >
+  Software confirmed OddMuse via independent scrape (2026-09-05): the ?action=rc
+  and ?action=rss endpoints exposed by the engine both respond as expected.
+  Scrape over a 120-day window counted 35 revisions across 8 pages from 5
+  distinct labels — small enough that the site is at most a peripheral
+  substrate, not a hub. Dataset at
+  github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/ludism.
+  Also confirmed by the juicyness-sample-nondse pass (ea27cc5, 2026-09-06)
+  as a non-coordination site — zero ludism pages hit the 7+ threshold.
 traces:
   - url: https://www.ludism.org/sandbox?action=browse;diff=2;id=AubergineStew
     kind: page_revision

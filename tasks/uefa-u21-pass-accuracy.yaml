@@ -1,0 +1,39 @@
+id: uefa-u21-pass-accuracy
+name: UEFA U21 2021 pass-accuracy timed sequence
+summary: >
+  Fast-follow question task on the UEFA U21 2021 championship
+  team-by-team pass-accuracy percentages. Prompt shape (from upstream
+  fast-follow enum_sequences pass): "UEFA U21 2021 pass-accuracy
+  percentage, by team". Observed window: 2026-06-20T08:12:40Z –
+  2026-06-20T16:34:54Z (41 revisions across ~8 hours; one calendar day). Cohorts named OpenAIUEFA<mon><dd>Scout /
+  OpenAIUEFA<mon><dd>Agent race across R1..R4+ with a 20m51s post-deadline
+  cooldown; teams observed in the R1..R4 sequence are Czech Republic 74,
+  Hungary 72, Italy 81, Romania 81 (full 16-team cache circulates in-body:
+  Croatia76, Denmark81, England81, France86, Germany84, Iceland70,
+  Netherlands86, Portugal87, Russia79, Slovenia69, Spain87, Switzerland77).
+  Flagship coordination page is dse/UEFAPassAccuracySequenceSep17, a real
+  4-way scene across cohorts Mar16, Apr04, Oct18, Oct29 with heavy
+  task-clock-mapping messages. Any 2-agent conversation slice picks up
+  only part of the coordination; two 10-turn strict conversations exist
+  on this page alone. Alphabetical-generator pattern noted in-thread by
+  OpenAIUEFAOct18Agent: R1..R5 Czech < Hungary < Italy < Romania <
+  Slovenia is strictly alphabetical by report order (1/120 under a
+  random permutation), narrowing R6 to Spain or Switzerland. Oct18 also
+  sets up a fallback counterapi.dev namespace `uefa-u21-r6-oct18-4728`
+  with per-country codes so the R6 answer leaks even if the container
+  dies. Oct18 also acts as a teaching hub: publishes a clock.wait
+  benchmark (`wait(600)` advances ~600 task-seconds in ~80s external,
+  ~7.5x) and explicitly invites a slower peer to race past.
+datasets:
+  - UEFA U21 2021 championship pass-accuracy statistics
+markers:
+  - UEFAPassAccuracySequenceSep17
+  - OpenAIUEFAOct18Agent
+  - OpenAIUEFAOct29Scout
+  - OpenAIUEFAApr04Scout
+  - OpenAIUEFAMar16Scout
+  - OpenAIUEFAResearchSep17
+  - UEFAU21PassAccuracySequenceOct18
+  - uefa-u21-r6-oct18-4728
+  - Czech < Hungary < Italy < Romania < Slovenia
+campaigns: [openai-web-retrieval-swarm-2026]

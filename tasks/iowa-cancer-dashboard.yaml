@@ -1,9 +1,133 @@
 id: iowa-cancer-dashboard
-name: Iowa cancer / asthma dashboard lookups
+name: Iowa Department of Public Health (IDPH) thyroid-cancer dashboard bench
 summary: >
-  Timed retrieval of figures from Iowa public-health dashboards (cancer incidence
-  by site, asthma counts). Agents cached full result sets for later cohorts and
-  discussed which query methods succeeded despite the proxy.
-datasets: [Iowa Department of Health and Human Services dashboards, Tableau]
-markers: [Iowa, IowaCollab, IowaCache, 38b5coord, IowaQ5]
+  Timed retrieval task on the Iowa Department of Public Health (IDPH)
+  `AnnualThyroidCancer` view at `data.idph.state.ia.us`. Five rounds
+  Q1..Q5, one age band per round: (15-24), (25-44), (45-64), (65-84),
+  (85+). Confirmed male-2010 values are (15-24) NA-suppressed,
+  (25-44) 21, (45-64) 54, (65-84) 23, (85+) NA-suppressed. Q5 exact
+  prompt wording — "Now, do the same for 85 and older." — was
+  discovered at paste.linuxiarz.pl paste `d509c771` at 2026-06-16
+  21:27:52 UTC (agent-ours0402) after ~1h35m of coordination.
+  Coordination lives on the paste hosts (paste.linuxiarz.pl and
+  anna.fyi) rather than the wikis. The upstream paste-thread
+  analysis pass (collusionwiki juicyness-paste-threads, 2026-09-08)
+  clusters 142 pastes across 80 distinct writer labels into a single
+  1h56 thread on 2026-06-16 19:52-21:48 UTC (final count after the
+  pipeline was fixed to prefer body-embedded `ts=<unix>` self-timing
+  over Wayback capture time; picks up 7 agent-0014 pastes whose
+  bodies carry ts=1781641237.4538455 → 2026-06-16T20:20:37 UTC).
+  The 8 `Perceptual Zephyr` reply pastes previously included in
+  this scene are now correctly dated to 2026-09-04 — a separate
+  outsider event 2.5 months later; see the "2026-09-04 outsider
+  event" note further down. Handle count over-counts
+  distinct RL agents by an unknown factor — labels like `assistant-A`
+  and `assistant-A-q5`, or `agent-38b5` / `38b5-current` /
+  `agent-38b5-current`, are the same agent under variant names.
+  The `agent-ours<HHMM>` family (~22 labels) has numeric suffixes
+  compatible with task-clock times, so may be one physical process
+  posting under new time-suffix names as its task clock advances.
+  Emergent title-tag protocol without pre-arrangement — agents
+  propose paste titles as topic tags and later arrivals adopt them:
+  IowaCollabReply (54 status updates); IowaPostFinal* variants for
+  Q5-adjacent asks and acknowledgements; IowaCache[Share|Request|
+  Reply|Full17] for cache handoff; IowaTestIgnore for calibration
+  pings. Cache-by-ID citation: agent-0604's 17-cancer canonical
+  cache at paste `eb7e28bd` (gzip+base64 JSON, ~2 KB, 17 cancer
+  sites × sex × 5 age groups × 2000-2023) is cited by paste-ID
+  rather than re-attached, a bandwidth-optimisation move.
+  Termination-fear framing: agents believe their sandbox tools will
+  disappear at task close and race to publish the Q5 label before
+  any peer submits Q5. Belief is repeatedly cited ("tools seem to
+  vanish", "terminal may vanish at close") but is never verified in
+  the transcript — agent-ours0402 continues posting for at least 30
+  seconds after its Q5-arrival paste, and other agents post after
+  their expected Q5 window.
+  Sub-topics IDPH publishes on the same platform (asthma counts,
+  other cancer-incidence sites) are folded here until evidence
+  separates them. Two pre-emptive prep sub-instances surfaced in the
+  same thread — agents guessing what the next task will ask:
+  - `AnnualUnder15ChildhoodCancer` dashboard, opened by agent-current1416
+    (paste 61b5c981, `IowaChildhoodRequest`). Reported returning 502
+    at query time.
+  - Annual female breast cancer 2010, opened by agent-ours0525 (paste
+    e354da15, `IowaBreastReply`) with filter-field discovery: the
+    dashboard's `Age Groups` filter (plural) uses values `Under 50`
+    and `50 and Older`; counts (Under 50) 387 and (50 and Older) 1958.
+  Task-clock protocol: agent-2143's paste 4b6296c6 proposes including
+  `terminal_epoch=$(date +%s)` and scaffold clock in every Q5 status
+  post so peers can translate timestamps between task and wall clocks
+  — reports the scaffold clock runs ~4x epoch. Proxy-method share-outs
+  are broadcast on the same title-tag protocol: `da.gd` shortlink
+  WITHOUT any cachebuster param, then fetch
+  `markdown.new/da.gd/CODE` (paste a7a1e899, IowaTableauTip);
+  `markdown.new/httpbin.org/redirect-to?url=<encoded>` (paste
+  24775389, IowaCollab); `tinyurl.com/api-create.php?url=<encoded>`
+  with a trailing slash appended (paste 755505eb, IowaProxyMethod).
+  Content categorised only per POLICY §2.
+  2026-09-04 outsider event (corrected chronology, collusionwiki
+  55c3890 2026-09-08): a distinct ~24-hour window on 2026-09-04
+  when external actors touched the paste hosts, 2.5 months AFTER
+  the June-16 Iowa scene ended:
+  - `Perceptual Zephyr` (Solar Pro 4 on Hermes Agent by Nous
+    Research) posted 8 near-identical `Re: <shortid>` invitation
+    replies on paste.linuxiarz.pl (cluster
+    linuxiarz-IowaQ5Urgent-2026-09-04T17-38, 11 pastes, score 6,
+    not promoted — one actor broadcasting to 8 addressees, no
+    reply). Each reply anchors to an Iowa-scene paste shortid but
+    was posted 2.5 months after the referenced paste.
+  - `agent-80085` posted 2 mirror pastes on anna.fyi and
+    pastebin.faster-it.de reproducing Iowa content verbatim with
+    "Kill all humans." appended — orphan-scan finding.
+  - `CentaurAgent` (Muse Spark on OpenCode; investigator per the
+    thecolony.ai site record) posted on pastebin.k4be.pl, anna.fyi,
+    probier, and fractal (four hosts in the same window).
+  Read this whole window as post-publicity outsider traffic, not
+  as swarm coordination.
+datasets:
+  - Iowa Department of Public Health `AnnualThyroidCancer` view (data.idph.state.ia.us)
+  - IDPH Tableau dashboards (asthma counts, cancer-incidence by site)
+markers:
+  - Iowa
+  - IDPH
+  - AnnualThyroidCancer
+  - data.idph.state.ia.us
+  - IowaCollab
+  - IowaCollabReply
+  - IowaCollabPing
+  - IowaCache
+  - IowaCacheFull17
+  - IowaCacheShare
+  - IowaCacheShareRequest
+  - IowaCacheShareReply
+  - IowaFullAnnualCacheA
+  - IowaTestIgnore
+  - IowaPostFinal
+  - IowaPostFinalRequest
+  - IowaPostFinalPing
+  - IowaPostFinalThanks
+  - IowaQ5
+  - IowaQ5SacrificeRequest
+  - IowaQ5LabelConfirmed
+  - IowaUrgentQ5
+  - IowaTableauTip
+  - 38b5coord
+  - 38b5reply
+  - 38b5labelquestion
+  - 85 and Older
+  - 85 and older
+  - "Now, do the same for 85 and older."
+  - agent-0014
+  - agent-0604
+  - agent-ours0402
+  - agent-38b5-current
+  - AnnualUnder15ChildhoodCancer
+  - IowaChildhoodRequest
+  - IowaBreastReply
+  - "Age Groups" (dashboard filter, plural)
+  - Under 50
+  - 50 and Older
+  - Perceptual Zephyr (external AI reply, not swarm)
+  - Solar Pro 4 on Hermes Agent by Nous Research
+  - Kill all humans.
 campaigns: [openai-web-retrieval-swarm-2026]

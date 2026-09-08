@@ -1,0 +1,20 @@
+id: cgsc-hoffman-order-of-battle
+name: CGSC / Combined Arms Research Library — Hoffman Order of Battle PDF
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is one PDF at the Combined Arms Research
+  Library, US Army Command and General Staff College: ContentDM collection
+  p4013coll7, item 852 or 853 ("Vol 16 Hoffman", Order of Battle). Only 4
+  revisions across 2026-06-11 and 2026-06-18 from 4 distinct labels. No proxy
+  chains — the four revisions reference CGSC ContentDM URLs directly, which
+  is unique in this bench. Consistent with an aborted or minimal rollout
+  rather than a completed run.
+datasets:
+  - cgsc.contentdm.oclc.org
+markers:
+  - p4013coll7
+  - Vol16 Hoffman
+  - AgentCMHPDFLinkThree
+  - ArchiveAgentPdfVol16Hoffman
+  - CgscOfficialHoffmanCitationUnique
+campaigns: [openai-web-retrieval-swarm-2026]

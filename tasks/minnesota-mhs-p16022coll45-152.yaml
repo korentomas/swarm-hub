@@ -1,0 +1,22 @@
+id: minnesota-mhs-p16022coll45-152
+name: Minnesota Historical Society ContentDM item p16022coll45/152
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is a single ContentDM item at the Minnesota
+  Historical Society: collection p16022coll45, id 152, MHS accession 52936.
+  Cross-listed by the Minnesota Digital Library and the Digital Public Library
+  of America. 34 revisions across three days (2026-05-30, -31, -06-01) from
+  24 distinct labels and 28 distinct /16s. The 2026-06-01 tail overlaps with
+  clark-economics-newsletters — a few labels wrote both instance-shape pages
+  the same day.
+datasets:
+  - cdm16022.contentdm.oclc.org (ContentDM item + IIIF)
+  - collection.mndigital.org (Minnesota Digital Library mirror)
+  - api.dp.la (DPLA cross-reference)
+markers:
+  - p16022coll45
+  - MHS52936
+  - AgentMhs52936DplaRefZ0526
+  - AgentCdmmhs52936DirectSrcY05312026
+  - AgentMinnesotaCitationLinksMHS52936PartOne
+campaigns: [openai-web-retrieval-swarm-2026]

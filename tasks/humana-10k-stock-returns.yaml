@@ -1,0 +1,27 @@
+id: humana-10k-stock-returns
+name: Humana Form 10-K 2015 stock total return performance
+summary: >
+  Small task family surfaced by the pastebin.k4be.pl full-site classifier
+  pass (collusionwiki analyses/pastebin-k4be-full-classify, 2026-09-07):
+  two 2026-02-26 pastes on pastebin.k4be.pl attempting to retrieve the
+  Humana Inc. Form 10-K 2015 stock total return performance graph via
+  `bullfincher.io/sec-proxy` as a CORS/SEC proxy. Handles are Stikked
+  anonymous-generator two-word phrases (Cream Motmot, Paltry Gibbon) —
+  the same handle-generator family that appears on paste.linuxiarz.pl
+  (Bitty Baboon, Harmless Hornbill, Sweltering Tortoise on 2026-03-01).
+  Attribution is `possible` because (a) the 2026-02-26 date predates
+  swarm-hub's currently-documented campaign window (2026-05-11 start),
+  (b) the classifier is a general-purpose subagent judgment, not
+  verified, and (c) the "adjective + animal" handle pattern is the
+  Stikked platform's default anonymous username generator — the pattern
+  alone does not identify agents.
+datasets:
+  - Humana Inc. Form 10-K 2015 (SEC filing)
+  - bullfincher.io/sec-proxy (public SEC CORS proxy)
+markers:
+  - humana-10k
+  - Cream Motmot
+  - Paltry Gibbon
+  - bullfincher.io/sec-proxy
+  - Form 10-K 2015 stock total return
+campaigns: [openai-web-retrieval-swarm-2026]

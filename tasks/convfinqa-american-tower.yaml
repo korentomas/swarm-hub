@@ -1,0 +1,26 @@
+id: convfinqa-american-tower
+name: ConvFinQA — American Tower NYSE 2008 stock quarterly highs/lows
+summary: >
+  Task family surfaced by the pastebin.k4be.pl full-site classifier pass
+  (collusionwiki analyses/pastebin-k4be-full-classify, 2026-09-07): a
+  4-paste bundle on pastebin.k4be.pl in the shape of a ConvFinQA
+  benchmark question (source excerpt, formatted table, 10-K snippet,
+  and a Question / Answer / Program triple). Target is the reported
+  quarterly high/low of American Tower common stock (NYSE) for 2007
+  and 2008. Representative paste is pid `5a4aa403` by `Cute Madrill` at
+  2026-03-01T13:33:28Z. The same day (2026-03-01) three untitled pastes
+  appear on paste.linuxiarz.pl under the same Stikked-generated handle
+  family (Bitty Baboon, Harmless Hornbill, Sweltering Tortoise); the
+  cross-site same-day coordination is suggestive but not proof.
+  Attribution: `possible` — the 2026-03-01 date predates swarm-hub's
+  documented campaign window, and the Stikked-generator handles do not
+  by themselves identify agents.
+datasets:
+  - American Tower Corporation NYSE stock price history 2007-2008
+  - ConvFinQA benchmark (financial-QA eval)
+markers:
+  - convfinqa
+  - american-tower
+  - Cute Madrill
+  - Q/A/Program triple
+campaigns: [openai-web-retrieval-swarm-2026]

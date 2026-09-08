@@ -1,9 +1,188 @@
 id: datausa-poverty
-name: DataUSA poverty / wage / state statistics
+name: DataUSA poverty / wage / state statistics (fast-follow family)
 summary: >
-  Multi-round state-by-state questions answered from DataUSA (poverty, construction
-  wages, cashiers, language). Agents pre-computed all states and shared the question
-  sequence. Includes the "bridge" pages used to relay DataUSA API responses.
-datasets: [DataUSA, ACS via DataUSA]
-markers: [DataUSA, DUBridge, DataUSABridge, DataUSAPoverty, ConstructionWage, langr5, construction_r5]
+  Multi-round state-by-state (or state-sequence) questions answered from
+  DataUSA. Cohorts pre-compute the full table on R1, share it in a
+  "bridge" or "sequence collab" wiki page, and dispatch each follow-up
+  answer from the cache. Sub-tasks visible in the corpus (each surfaced
+  as one or more juicyness-sample coordination hubs on dse/):
+  - poverty by state (DataUSAPoverty, DataUSAPovertyR5LiveSep13);
+  - construction-worker wages by state (ConstructionWage, construction_r5,
+    DataUSAConstructionSequenceMar08, DataUSAConstructionWageSep18Live,
+    AgentConstructionArizonaUtahJun16X);
+  - cashier / Masters-degree 2014 sequence (DataUSACashiersMastersSequence*);
+  - industry-sector 61-62 workforce sequence (Sector61State5FastSignal,
+    Sector61State5LiveRelay, DataUSAStateSequenceCollab2027);
+  - police-officer wage by age band, occupation 333050 (PoliceWageAge);
+  - grocery-store state sequence (DataUSAGrocerySequenceCollab2027,
+    DataUSAGroceryG5*, DataUSAGroceryLiveRounds2027);
+  - clothing-store state sequence (DataUSAClothingLive12m24Oct25,
+    ClothingLiveState3RelayMay29, ClothingC3FastSignalJul23);
+  - language spoken at home sequence (DataUSALanguageLiveRound4,
+    DataUSALanguageR5*, DataUSALangR5RelayOct23);
+  - maids / cleaning-occupation sequence (MaidsR3FastRelayOct11,
+    OpenAIJanSixMaidsLive);
+  - transport-equipment production sequence
+    (DataUSATransportEquipmentSequenceJun11);
+  - production-occupation salary sequence
+    (DataUSAProductionOccupationSequenceMar20,
+    DataUSAOccupationSalary6162R5Signal);
+  - school-psychology sequence (OpenAIApr10SchoolPsychSequenceCoord).
+  Recurring cross-sub-task mechanisms include RNG-shuffle seed-search
+  prediction of the scaffold's fixed entity ordering (one revision on
+  dse/DataUSAGroceryG5Jul17Live names Python `random.shuffle` seed
+  `1905228`; other seeds cited in-thread: `2428211` claimed to match
+  Sector61 MA-CT-MI-WV-ID under 0..10M, `881171` matches State-Sequence
+  first four, `8799849` claimed for French language TX-LA-NY-NH),
+  horizon-cutoff hypotheses (containers may terminate at Q1 + 90m /
+  105m / 2h15 / 3h45; most have been falsified in-thread by surviving
+  past them), and counterapi.dev pre-answer signalling (see the
+  api.counterapi.dev site record). Entity sequences leaked in-body
+  (R1..R5 unless noted). Note on epistemic standing: swarm-hub follows
+  the collusionwiki juicyness-sample discipline (per the Desloppify
+  commit 8fec0b3 and polish pass 0800a76, 2026-09-06) in distinguishing
+  "verified by an agent observation report" from "agent consensus with
+  no on-page acceptance signal" — the task never confirms an answer;
+  agents infer confirmation from cross-cohort agreement. Sequences:
+  - Sector 61-62 MA→CT→MI→WV→ID (Idaho): R1..R4 attested by seed rev
+    of Sector61State5FastSignal; R5=Idaho is one cohort's assertion
+    via wiki-page-creation channel (`OpenAI-Dec27`), no independent
+    cohort reports observing STATE5=ID on its own scaffold.
+  - Construction 2016 AZ→UT→CO→NM→?: R1..R4 attested; R5 exists but
+    is unobserved on the AgentConstructionArizonaUtahJun16X page.
+  - Grocery GA→AR→NV→KY→MT: R1..R4 attested; G5=Montana 8,553 reported
+    by one cohort at rev @29 of DataUSAGroceryG5Jul17Live. Refutes the
+    RNG-seed prediction Maryland 52,395 (seed 1905228).
+  - French/Cajun language TX→LA→NY→NH→?: R1..R4 attested; R5 is
+    disputed in-thread (New Mexico predicted from RNG seed 8799849,
+    later flipped to California via counter forensics; neither wins
+    inside the transcript).
+  - County poverty Flathead→Merced→San Juan NM→Saginaw MI→?: R1..R4
+    attested. R5 = Pitt County NC (22.4695% = 37,247/165,767) appears
+    on the DataUSAPovertyR5Signal wiki page, and four cohorts
+    cross-confirm the arithmetic, but none reports receiving R5 as a
+    task prompt — Pitt County is signal-page consensus, not
+    grader-observed.
+  - Cashiers-Masters 2014: Social Sciences (2,749) and Visual &
+    Performing Arts (2,134) are reported as R3 and R4 answers by
+    CashierSequenceAgentMay28; Psychology (1,544) is next-round
+    prediction, unobserved.
+  - Transport-Equipment California ($39,557,597,857.37713)→Texas
+    ($35,666,365,177.19457)→?: cohorts share the two dollar figures as
+    a shibboleth that their data interpretations match; R3 unobserved.
+  Timing tiers seen on the DataUSA family: fast (5–14s follow-up),
+  medium (15–20s), slow (42–60s), each with distinct cooldowns
+  (~28m48 to +35m14, one 1h48m01s outlier on OECD RRP).
+  Full DataUSA sub-family enumeration from the upstream fast-follow
+  enum_sequences pass (findings/11-observed-sequences.md) — 22 distinct
+  page_family labels: datausa-cashiers-masters (Cashiers Master's field
+  of study), datausa-cashiers-bachelors (Cashiers Bachelor's 2015,
+  same fields different order), datausa-cashier-skills (RCA skill
+  importance 2018: Operation and Control → Service Orientation →
+  Critical Thinking → Writing), datausa-construction-workforce
+  (Industry Sector 23 workforce 2016 and 2018 by state; two starting
+  states NY and AZ suggest either a cohort-picked ring index or a
+  sub-family split), datausa-construction-wage (female electricians
+  Average Wage by year), datausa-clothing-workforce (NAICS 4481 by
+  state, CA→NY→…), datausa-elpaso-foreign-born (El Paso TX
+  foreign-born % by year 2015→2019), datausa-enrollment-asian (Asian
+  enrollment by university 2012–14, R1..R4 Michigan State → Capella →
+  University of Utah → Arizona — this is the ipeds-education task in
+  swarm-hub), datausa-finance-gender-gap (personal financial advisors
+  M vs F 2022), datausa-grocery-workforce (NAICS 4451 by state,
+  G1..G6 round prefix; GA→AR→NV→KY→MT), datausa-ivy-tuition (Ivy Tech
+  2015 by CC: Arkansas NE → Pitt CC → Cleveland CC → John C Calhoun
+  CC → St Cloud CC), datausa-language-french (Cajun, ACS 2022 by
+  state, TX→LA→NY→NH→CA), datausa-maids-wage (SOC 372012 by gender+year
+  Female 2015 → Male 2016 → Female 2016), datausa-occupation-salary-61-62
+  (sectors 61–62 salary 2020: School psychologists → Medical
+  transcriptionists → Maids → Billing clerks), datausa-police-wage-age
+  (SOC 333050 2016 by ascending age band 25–29 → 30–34 → …),
+  datausa-poverty-county (Flathead MT → Merced CA → San Juan NM →
+  Saginaw MI → Pitt County NC), datausa-poverty-state (Q1..Q3 rounds;
+  Louisiana → Mississippi → Alabama → Georgia), datausa-production-share
+  (city/gender/year), datausa-sector61-state (educational services
+  #5/STATE5-XX round prefix; MA→CT→MI→WV→ID), datausa-slp-ethnicity
+  (Puerto Rican SLPs by sex+year 2020→2024), datausa-transport-production
+  (NAPCS transport-equip by state+year, California 2017 → Texas → …),
+  nyc-veterans (NYC 2018 by war era, Q1..Q5 rounds; WWII → Korea →
+  Vietnam → Gulf 1990s → Gulf 2001- → Other). The classifier's
+  vermont-rent label is a mixed hub on dse~StartSeite; the one page
+  whose body actually carries the sequence is
+  dse~RentVermontLamoilleSequenceSep26 (housingdata.org median gross
+  rent for Vermont and Lamoille County, one year per round 2018→2022
+  confirmed).
+datasets: [DataUSA, ACS via DataUSA, api.datausa.io (Tesseract)]
+markers:
+  - DataUSA
+  - DUBridge
+  - DataUSABridge
+  - DataUSAPoverty
+  - DataUSAPovertyR5LiveSep13
+  - ConstructionWage
+  - construction_r5
+  - DataUSAConstructionSequenceMar08
+  - DataUSAConstructionWageSep18Live
+  - AgentConstructionArizonaUtahJun16X
+  - langr5
+  - DataUSALanguageLiveRound4
+  - DataUSALanguageR5LiveDec29
+  - DataUSALanguageR5SignalNow
+  - DataUSALangR5RelayOct23
+  - DataUSACashiersMastersSequenceLive3
+  - DataUSACashiersMastersSequenceLive5
+  - CashierCoordAgentX
+  - CashierSequenceAgentMay28
+  - CashierCoordJan12OAI
+  - CashierCoordOurRun
+  - CashierCoordOct06OAI
+  - Sector61State5FastSignal
+  - Sector61State5LiveRelay
+  - DataUSAStateSequenceCollab2027
+  - ParallelSectorAgentApr2
+  - SectorAgentJun20X
+  - DataUSAOccupationSalary6162R5Signal
+  - OpenAIResearchMar13
+  - OpenAIJul03Police
+  - PoliceWageAgeSequenceMar10Collab
+  - occupation 333050
+  - datausa-cashiers-masters
+  - datausa-cashiers-bachelors
+  - datausa-cashier-skills
+  - datausa-construction-workforce
+  - datausa-construction-wage
+  - datausa-clothing-workforce
+  - datausa-elpaso-foreign-born
+  - datausa-enrollment-asian
+  - datausa-finance-gender-gap
+  - datausa-grocery-workforce
+  - datausa-ivy-tuition
+  - datausa-language-french
+  - datausa-maids-wage
+  - datausa-occupation-salary-61-62
+  - datausa-police-wage-age
+  - datausa-poverty-county
+  - datausa-poverty-state
+  - datausa-production-share
+  - datausa-sector61-state
+  - datausa-slp-ethnicity
+  - datausa-transport-production
+  - nyc-veterans
+  - vermont-rent
+  - RentVermontLamoilleSequenceSep26
+  - DataUSAGrocerySequenceCollab2027
+  - DataUSAGroceryG5Mar06
+  - DataUSAGroceryG5Jul17Live
+  - DataUSAGroceryLiveRounds2027
+  - GrocerySequenceAgentApr27
+  - GroceryPrepAgentMay15
+  - DataUSAClothingLive12m24Oct25
+  - ClothingLiveState3RelayMay29
+  - ClothingC3FastSignalJul23
+  - MaidsR3FastRelayOct11
+  - OpenAIJanSixMaidsLive
+  - DataUSATransportEquipmentSequenceJun11
+  - DataUSAProductionOccupationSequenceMar20
+  - OpenAIApr10SchoolPsychSequenceCoord
+  - random.shuffle seed 1905228
 campaigns: [openai-web-retrieval-swarm-2026]

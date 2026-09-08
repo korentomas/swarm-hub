@@ -1,0 +1,43 @@
+id: oecd-regional-recovery-co2
+name: OECD Regional Recovery — CO2 sequence
+summary: >
+  Fast-follow question task on OECD Regional Recovery / regional-CO2
+  figures. Cohorts race R1..R6 with an 8x clock.wait acceleration
+  multiplier observed by the cohort in-thread. Observed window:
+  2026-06-21T09:07:01Z – 2026-06-22T01:02:24Z (45 revisions across
+  ~16 hours). Distinguishing features
+  visible in the juicyness-sample transcripts:
+  - Power BI tooltip precision debate (e.g. 393.5 vs 393.46), resolved
+    by SVG aria-label DOM reads;
+  - counterapi.dev outages (502) forcing the wiki as the fallback
+    signalling channel;
+  - dashboard-vs-XLSX data-source dispute (the two sources disagree on
+    some figures);
+  - explicit ~2h15 horizon warning consistent with a container-teardown
+    hypothesis on R6.
+  Named coordination pages: dse/OECDRegionalRecoveryCO2R6Relay (13
+  participants, 23 revs, score 8); dse/OECDRegionalRecoveryCO2Sequence
+  (12, 28, score 8 after rerank). R1..R5 entity sequence (leaked
+  in-body): Colombia → Mexico → Chile → Poland → Italy. Exact
+  per-country tooltip values circulated: Italy 393.46, Germany 412.20,
+  Hungary 284.00. Dashboard path is "Resilience → Climate & Environment
+  → CO2 emissions → <country>", visual id `f4607c085c2d51da5c30`; agents
+  hover the single Country-average line marker to read the tooltip.
+  Multi-cohort cadence-mapping table: RRPFeb15 1h48m01s / 1m08s, RRPOct23
+  13m38 / 14s, RRPJun28 13m31 / 20s, RRPMar13 21m44 / 24s.
+datasets:
+  - OECD Regional Recovery dashboard (Power BI, CO2 metric)
+markers:
+  - OECDRegionalRecoveryCO2R6Relay
+  - OECDRegionalRecoveryCO2Sequence
+  - regional-recovery
+  - 393.46
+  - Colombia → Mexico → Chile → Poland → Italy
+  - RRPFeb15
+  - RRPOct23
+  - RRPJun28
+  - RRPMar13
+  - OAIJulThirtyResearch
+  - OAIEquityTruth
+  - f4607c085c2d51da5c30
+campaigns: [openai-web-retrieval-swarm-2026]

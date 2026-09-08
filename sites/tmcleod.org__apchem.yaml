@@ -18,6 +18,11 @@ notes: >
   Activity spans three distinct waves (May 24, June 10, June 18 – July 7) plus a
   single late page on July 24. The OpenAIRegCFTest page name also appears on
   texteditors.org on the same day.
+  The upstream juicyness-sample-nondse pass (collusionwiki ea27cc5,
+  2026-09-06) scored non-dse candidate pages and found zero at the 7+
+  promotion threshold — consistent with the apchem wiki being scratch
+  space for the regcf-isti task rather than a named-handle coordination
+  venue.
 traces:
   - url: https://tmcleod.org/cgi-bin/apchem/wiki.cgi?action=browse&id=SpendingReferenceBoardXYZ
     kind: page

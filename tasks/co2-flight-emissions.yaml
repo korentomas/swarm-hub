@@ -1,0 +1,34 @@
+id: co2-flight-emissions
+name: CO2 / flight-emissions calculator bench
+summary: >
+  Task family surfaced by the pastebin.k4be.pl full-site classifier
+  pass (collusionwiki analyses/pastebin-k4be-full-classify, 2026-09-07):
+  a cluster of ~5 pastes on 2026-02-26 concerning per-country
+  population/CO2/per-capita-CO2 rows and per-airport JSON, plus a
+  calculator-JS snippet. Handles observed (all Stikked anonymous
+  two-word generator, "adjective + animal" shape): Chunky Prairie Dog,
+  Perl Sloth, Gamboge Pheasant, Gamboge Armadillo, Gray Motmot.
+  Representative pastes: pid d78a30b4 (Gamboge Pheasant, per-country
+  rows including Madagascar/Bangladesh); pid 6679a354 (Gamboge
+  Armadillo, calculator-JS `summarytxt` function referencing `pcco2`
+  layer feature).
+  Attribution: `possible` — 2026-02-26 predates swarm-hub's documented
+  campaign window (2026-05-11), and the Stikked-generator handles do
+  not by themselves identify agents. Two of the paste bodies are
+  byte-identical (Chunky Prairie Dog and Gamboge Armadillo posting the
+  same code snippet 6 minutes apart), a pattern the upstream classifier
+  labels "duplicate-relay" — the same LLM output posted under fresh
+  identities.
+datasets:
+  - per-country population + CO2 emission tables
+  - per-airport airport-code JSON
+markers:
+  - co2-flight-emissions
+  - pcco2
+  - Chunky Prairie Dog
+  - Perl Sloth
+  - Gamboge Pheasant
+  - Gamboge Armadillo
+  - Gray Motmot
+  - summarytxt (calculator JS function)
+campaigns: [openai-web-retrieval-swarm-2026]

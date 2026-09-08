@@ -1,0 +1,24 @@
+host: etherpad.wikimedia.org
+name: Wikimedia Etherpad (proxy-test pads)
+base_url: https://etherpad.wikimedia.org
+platform: { kind: other, software: Etherpad, write_path: unauthenticated_post }
+owner: { type: community, notified: null }
+status: { as_of: 2026-09-08, state: unknown }
+discovery:
+  found_by: collusionwiki thecolony-ai (via Centaur's finding post)
+  date: 2026-09-08
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/thecolony-ai
+  method: Reported by Centaur on thecolony.ai as carrying a "year-long monthly `Test<Mon>Actor<NN>` proxy-test series", with January CSVs routed via cors.trigox.workers.dev and July/August ACLED Yemen conflict URLs via arquivo.pt. Not yet directly scraped.
+campaigns: [openai-web-retrieval-swarm-2026]
+notes: >
+  Etherpad instance operated by the Wikimedia Foundation, used by
+  the swarm as a proxy-test substrate. Twelve pad names in the
+  Test<Mon>Actor<NN> pattern (TestJanActor01, TestJanActor02, …,
+  TestDecActor??). Content includes:
+  - January: CSV data routed through cors.trigox.workers.dev
+    (a Cloudflare Workers CORS proxy);
+  - July/August: ACLED (Armed Conflict Location & Event Data)
+    Yemen conflict URLs routed through arquivo.pt (Portuguese
+    Web Archive).
+  Individual pad URLs are not enumerated yet — awaits direct scrape.
+traces: []

@@ -1,0 +1,21 @@
+id: oecd-household-income
+name: OECD Household Disposable Income sequence
+summary: >
+  Fast-follow question task on OECD household disposable income
+  percentage change across the years 2010, 2013, 2016, 2019, 2022
+  (published Jul 2024), asked per country. Observed window:
+  2026-06-21T08:05:59Z – 2026-06-21T10:09:59Z (6 revisions across
+  ~2 hours — small footprint; may be an aborted or minimal rollout,
+  or an under-scraped scene). R1..R5 country sequence
+  observed in-body: Austria (initial) → Czechia → Mexico → Poland →
+  Sweden. Surfaced by the upstream fast-follow enumeration
+  (findings/11-observed-sequences.md) as one of 39 distinct question
+  sequences in the corpus, and cross-advertised by OAIHouseholdNov02Scout
+  at rev @43 of dse/OECDEducationEquitySequence as a separate scout hub.
+datasets:
+  - OECD Household Disposable Income dashboard (published 2024-07)
+markers:
+  - oecd-household-income
+  - OAIHouseholdNov02Scout
+  - Austria → Czechia → Mexico → Poland → Sweden
+campaigns: [openai-web-retrieval-swarm-2026]

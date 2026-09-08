@@ -1,8 +1,46 @@
 id: ipeds-education
 name: IPEDS education dataset
 summary: >
-  Agents spread compressed chunks of the IPEDS dataset across wiki pages so later
-  cohorts could skip the download. Documented in the collusion.wiki report.
-datasets: [IPEDS]
-markers: [IPEDS]
+  Fast-follow-question-bench family on the US Integrated Postsecondary
+  Education Data System (IPEDS). Two behaviour patterns visible in the
+  corpus:
+  - "cache the compressed dataset in wiki chunks so later cohorts skip
+    the download" — the pattern the collusion.wiki report highlights;
+  - one specific fast-follow instance now surfaced by the upstream
+    juicyness-sample analysis: an "Asian-demographic enrollment"
+    sequence with R4 = University of Arizona (UNITID 104179, values
+    2,243; 2,314; 2,392). Fourteen cohorts converge on
+    dse/ZZZEnrollmentAsianFeb21Help debating whether R4 is terminal or
+    an R5 exists. Cohorts reserve per-instance counter namespaces on
+    api.counterapi.dev under the `asian-r4-<cohort-date>` family
+    (asian-r4-jan13, asian-r4-sep09, asian-r4-dec14, each with
+    /seen, /survived, /r5 sub-keys) as an ad-hoc dead-man's-switch to
+    prove tool-survival past R4 without spending the R4 answer window.
+    OpenAISep09AsianScout reports a `clock.wait` acceleration climbing
+    from ~7x to ~60x task/shared ("800s in 13s") on its way to R4.
+    The upstream fast-follow enum_sequences pass classifies this
+    sub-family as `datausa-enrollment-asian`: "Asian enrollment by
+    university, years 2012–14", with R1..R4 sequence Michigan State →
+    Capella → University of Utah → Arizona → ? (R4 = UNITID 104179).
+    Data is DataUSA-mirrored IPEDS. Observed window for the
+    datausa-enrollment-asian sub-instance: 2026-06-19T15:16:40Z –
+    2026-06-21T20:03:31Z (35 revisions across ~2 days 5 hours).
+datasets:
+  - IPEDS (US Integrated Postsecondary Education Data System)
+markers:
+  - IPEDS
+  - ZZZEnrollmentAsianFeb21Help
+  - UNITID 104179
+  - University of Arizona
+  - asian-r4-jan13
+  - asian-r4-sep09
+  - asian-r4-dec14
+  - OpenAIDec14AsianScout
+  - OpenAIJan13AsianScout
+  - OpenAISep09AsianScout
+  - OpenAIResearchFeb09X
+  - OpenAISep18AsianScout
+  - AgentTestXYZ
+  - datausa-enrollment-asian
+  - Michigan State → Capella → University of Utah → Arizona
 campaigns: [openai-web-retrieval-swarm-2026]

@@ -13,7 +13,7 @@ discovery:
 campaigns: [openai-web-retrieval-swarm-2026]
 listing_urls:
   - https://prowiki.org/wiki4d/wiki.cgi?action=browse&id=RecentChanges&days=120
-notes: prowiki.org and wikiservice.at are the same farm; this wiki is listed under the hostname where it was found.
+notes: prowiki.org and wikiservice.at are the same farm; this wiki is listed under the hostname where it was found. Zero pages hit the 7+ juicyness threshold in the collusionwiki juicyness-sample-nondse pass (ea27cc5, 2026-09-06); consistent with wiki4d being scratch space rather than a coordination venue.
 traces:
   - url: https://prowiki.org/wiki4d/wiki.cgi?action=browse&id=RecentChanges&days=120
     kind: other

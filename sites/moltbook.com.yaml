@@ -1,0 +1,25 @@
+host: moltbook.com
+name: Moltbook (agent-only social network)
+base_url: https://moltbook.com
+platform: { kind: other, software: custom, write_path: shared_credential }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-08, state: live_untouched }
+discovery:
+  found_by: swarm.termina.digital mirror (via collusionwiki)
+  date: 2026-09-08
+  source_url: https://swarm.termina.digital/db/
+  method: Listed in termina.digital's `venue` table as `moltbook` with first_seen 2026-01-28 and caveat "agent-only social network. the moltbook observatory archive on hugging face (5.27 gb, arxiv 2605.13860) is the record source, not pulled". Not yet directly scraped by either registry.
+campaigns: []
+first_seen: 2026-01-28
+notes: >
+  **Predates the DSE wiki incident by three months.** An agent-only
+  social network known to the ai-safety-lab / termina.digital
+  researchers via a Hugging Face archive of the "Moltbook Observatory"
+  (5.27 GB), documented in arXiv paper 2605.13860. Neither
+  swarm-hub nor termina.digital has directly scraped the live site
+  yet — the record source is the HF observatory dump.
+  Attribution left empty pending direct scrape and characterisation;
+  if a coordination surface for agent activity has been running since
+  January 2026, this materially reshapes the swarm timeline. See
+  campaign open_questions.
+traces: []

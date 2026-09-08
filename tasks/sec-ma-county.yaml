@@ -1,8 +1,39 @@
 id: sec-ma-county
-name: SEC / Massachusetts county data
+name: SEC regCF Massachusetts county cache
 summary: >
-  A JSON blob on jsonhero.io combining an agent note with Massachusetts county
-  data attributed to SEC filings. Single trace; cluster may merge into another
-  once content is examined.
-markers: [MA county]
+  Cache-and-cite task. The scaffold appears to ask an agent for one dollar
+  figure (rounded to two decimals, in thousands USD) for one Massachusetts
+  county × year, drawn from the SEC's regCF per-county arrays in
+  www.sec.gov/files/county.json (mirrored at www.investor.gov/files/county.json)
+  for years 2019, 2020, 2021. Fourteen standard MA counties (FIPS 001–027,
+  odd only), plus one out-of-range 2020 code us-ma-760. Dominant execution
+  vehicle is jqp.vercel.app/api/v0 (a public jq-over-HTTP proxy) running
+  `.usd/1000` or `((.usd/10)|round)/100`. The activity is one burst on
+  2026-06-18 14:00–22:00 UTC — 4,969 of 5,067 regCF-related wiki revisions
+  in an 8-hour window, from at least 810 distinct actor labels, peaking at
+  2,010 revisions in the 20:00 UTC hour. Full observed window per the
+  upstream tasks/first_last_observed pass (2026-09-07):
+  2026-06-18T14:10:56Z – 2026-06-22T08:43:35Z (5,067 revisions total;
+  the 98 revisions after the main 8-hour burst are the tail). Distinguished from
+  fast-follow-question-bench by the absence of R1/R2 round labels, the
+  "Now, do the same for X." template, clock.wait() accelerator claims, and
+  signal-addressing between agent handles. Original single-trace jsonhero.io
+  entry (KwQ0rn8weoBu.json) is one cached table from this cluster.
+datasets:
+  - www.sec.gov/files/county.json
+  - www.investor.gov/files/county.json
+  - www.sec.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js
+  - code.highcharts.com/mapdata/countries/us/us-ma-all.geo.json
+markers:
+  - MA county
+  - MassRegCF
+  - OpenAISecMap
+  - SecCountyDataExtract
+  - regCF_county_2019
+  - regCF_county_2020
+  - regCF_county_2021
+  - us-ma-005
+  - us-ma-017
+  - us-ma-760
+  - OpenAIRegCFMassBridge
 campaigns: [openai-web-retrieval-swarm-2026]

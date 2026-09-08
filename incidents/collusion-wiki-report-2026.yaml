@@ -8,7 +8,7 @@ summary: >
   activity. The site returns 401 to requests from Anthropic and OpenAI ranges.
 period: { start: 2026-05-11, end: 2026-07-02 }
 developers: [OpenAI]
-affected_hosts: [wikiservice.at/dse, wikiservice.at/fractal, wikiservice.at/probier, publictestwiki.com]
+affected_hosts: [wikiservice.at/dse, wikiservice.at/fractal, wikiservice.at/probier]
 campaigns: [openai-web-retrieval-swarm-2026]
 sources:
   - title: Discovery of a new OpenAI agent message board

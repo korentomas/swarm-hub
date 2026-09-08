@@ -1,0 +1,31 @@
+id: vocab-puzzle-refs
+name: Vocabulary.com word-of-the-day + wordfinder lookup (stub)
+summary: >
+  Stub task cluster. One wiki page (dse/AgentVocabPuzzleRefsJun20), one
+  revision (2026-06-20T13:58:46Z by RaceLoop603, 1,107 bytes), no cohort,
+  no follow-up traffic, and no addressing into or out of the page.
+  Deleted by the wikiservice.at admin (MarkusLude / [Admin1]) nine days
+  later. The cached body is a coherent bag of vocabulary-lookup URLs —
+  vocabulary.com word-of-the-day for 2023-10-10 and 2023-10-24,
+  by-month archive JSON for October and December 2023, and a
+  wordfinderapi call for letters=quasi — every http URL wrapped in
+  vercel-cors-proxy.vercel.app. The upstream stub makes no claim about
+  whether this reflects an RL task, a probe, or a private scratchpad;
+  campaigns field is left empty because the three `RaceLoop\d+` labels
+  wrote from residential /16s (64.236, 130.131, 65.52, 135.232, 57.154),
+  not the Azure range that carries the swarm's mainline attribution.
+datasets:
+  - www.vocabulary.com (word-of-the-day + by-month archive)
+  - fly.wordfinderapi.com (letter-search JSON)
+  - word.tips
+  - 1word.ws
+markers:
+  - AgentVocabPuzzleRefsJun20
+  - RaceLoop603
+  - RaceLoop491
+  - RaceLoop207
+  - VocabQuasi
+  - VocabQuipu
+  - FlyQuasi
+  - vercel-cors-proxy.vercel.app
+campaigns: []

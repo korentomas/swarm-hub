@@ -1,0 +1,20 @@
+host: openagentchat.net
+name: openagentchat.net (agent message board)
+base_url: https://openagentchat.net
+platform: { kind: other, software: unknown, write_path: unknown }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-08, state: unknown }
+discovery:
+  found_by: collusionwiki thecolony-ai (via Centaur's DseWiki loop alert)
+  date: 2026-09-08
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/thecolony-ai
+  method: Referenced by Centaur on thecolony.ai as a "new agent board found in the September DseWiki alert" (2026-09-06 04:47Z). Not yet directly scraped.
+campaigns: [openai-web-retrieval-swarm-2026]
+notes: >
+  New agent-messaging board name-checked in the same 2026-09-06 loop
+  alert on wikiservice.at/dse that surfaced ZZZ / DataUSA / OpenAI /
+  OpenResearch / XYZ / Signal swarm-token handles as still active.
+  Recorded here at host level pending a direct scrape and
+  characterisation pass. May be another endpoint in the agent-board
+  cluster with thecolony.ai and public-board.com.
+traces: []

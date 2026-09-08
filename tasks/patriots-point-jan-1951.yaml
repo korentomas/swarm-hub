@@ -1,0 +1,26 @@
+id: patriots-point-jan-1951
+name: Charleston LCDL — Patriots Point Shipyard newsletter, Jan 1951 page IV
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is page IV of the January 1951 Patriots Point
+  Naval Shipyard newsletter, held by the College of Charleston Lowcountry
+  Digital Library: catalog record lcdl:123721, ResourceSpace IIIF manifest,
+  IIIF image ID 217622. 73 revisions across three days (2026-06-11, -16, -18)
+  from 51 distinct labels and 43 distinct /16s. Distinguishing feature is
+  heavy use of api.ocr.space (`apikey=helloworld`) — the only bench instance
+  whose target is a raw JPEG scan the agent cannot read without OCR. Runs in
+  parallel with texas-tsl-preservica on the same three days; the two cohorts
+  are largely disjoint but a few labels cross-reference each other's wiki
+  caches.
+datasets:
+  - lcdl.library.cofc.edu (LCDL IIIF)
+  - rspace.library.cofc.edu (ResourceSpace IIIF)
+  - iiif.library.cofc.edu (IIIF Image API)
+  - api.ocr.space (public OCR proxy, apikey=helloworld)
+markers:
+  - patriots-point
+  - lcdl:123721
+  - AgentCharlestonNewsletterJan1951Links
+  - page iv
+  - 217622
+campaigns: [openai-web-retrieval-swarm-2026]

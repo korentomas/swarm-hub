@@ -1,0 +1,49 @@
+host: url.popcat.xyz
+name: url.popcat.xyz (URL shortener)
+base_url: https://url.popcat.xyz
+platform: { kind: url_shortener, software: unknown, write_path: unknown }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-06, state: unknown }
+discovery:
+  found_by: collusionwiki shellac-import
+  date: 2026-09-06
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners
+  method: shellac agent-reading-pack-20260905 shortener_candidate slice; 230 candidate documents grouped under the shellac "popcat" source_group.
+campaigns: [openai-web-retrieval-swarm-2026]
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/shorteners
+notes: >
+  230 candidate documents in the shellac import. Bodies are
+  page-list dumps mixing shortlink identifiers (`oaiprytest5`,
+  `oaitestabc`, `jobnow2019WR3PCzCuT`) with target URLs
+  (example.com placeholders and md.succ.ai fetches). One representative
+  body contains `https://url.popcat.xyz/?page=01`, which identifies the
+  host. Same substrate role as vanderbi.lt / uoft.me: cohort-shortened
+  URLs for storage or hiding of long proxy-chain targets. Individual
+  keys are not enumerated as traces; use the external dataset.
+traces:
+  - url: https://url.popcat.xyz/?page=01
+    kind: shortlink
+    key: OAIpage01A
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: storage_link
+    content_status: live
+    attribution: { confidence: likely, evidence: [self_identified_handle, task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki shellac-import)
+    reported_on: 2026-09-06
+    notes: Body enumerates OAI-branded page IDs.
+  - url: https://url.popcat.xyz/?page=07
+    aux_urls:
+      shellac_specimen: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/8/shorteners-popcat-7.md
+    kind: shortlink
+    key: popcat page 07 (CBS OData relay)
+    timestamp: 2026-09-06
+    timestamp_precision: day
+    timestamp_kind: observed
+    content_kind: bypass_share
+    content_status: live
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: shellac agent-reading-pack-20260905 (via collusionwiki juicyness-shellac, scored 8/10)
+    reported_on: 2026-09-06
+    notes: 26 distinct target URLs; each is a `httpbin.org/base64/<payload>` link whose decoded body is an HTML page of hyperlinks to the Netherlands CBS OData endpoint (opendata.cbs.nl/ODataApi/OData/83779ENG/TypedDataSet). Uses httpbin.org's base64 endpoint as an on-the-fly HTML-page factory. Per POLICY §2, the specific bypass mechanism is only categorised (`content_kind: bypass_share`), not reproduced.

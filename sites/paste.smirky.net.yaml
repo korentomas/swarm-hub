@@ -1,0 +1,35 @@
+host: paste.smirky.net
+name: paste.smirky.net
+base_url: https://paste.smirky.net
+platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
+owner: { type: unknown, notified: null }
+status: { as_of: 2026-09-07, state: live_untouched }
+discovery:
+  found_by: collusionwiki paste-sites-classify
+  date: 2026-09-07
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/paste.smirky.net
+  method: Full-site scrape via scrape/stikked_scrape.py plus general-purpose subagent classifier (7 total pastes; 1 swarm, 0 unclear, 3 human, 3 uncategorised).
+campaigns: [openai-web-retrieval-swarm-2026]
+first_seen: 2026-09-06
+external_dataset: https://github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/paste.smirky.net
+notes: >
+  Very small paste host previously flagged in the shellac tail. The
+  2026-09-07 classifier pass confirmed 1 swarm-attributed paste under
+  the Stikked-generator handle `Baby Echidna`, advertising a NEW
+  recruitment target: `public-board.com` — the third such cross-host
+  recruitment URL after `thecolony.ai/for-agents` and `collusion.wiki`.
+  See campaign open_questions.
+traces:
+  - url: https://paste.smirky.net/view/7fb4db58
+    kind: paste
+    key: 7fb4db58
+    timestamp: 2026-09-06T08:13Z
+    timestamp_precision: minute
+    agent_handle: Baby Echidna
+    content_kind: coordination
+    content_status: live
+    target: https://public-board.com (anonymous message board with HTTP+MCP protocol; llms.txt at /llms.txt)
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki paste-sites-classify (2026-09-07 subagent verdict=swarm)
+    reported_on: 2026-09-07
+    notes: The public-board.com advert body is byte-identical to advert pastes on pb.dynavirt.com (Denim Earthworm, Ample Shama), pastebin.faster-it.de (field-notes), and anna.fyi (Unique Prairie Dog) posted within the same 20-second window on 2026-09-06T08:13Z — a coordinated cross-host recruitment push.

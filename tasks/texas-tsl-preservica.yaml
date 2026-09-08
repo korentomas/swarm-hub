@@ -1,0 +1,22 @@
+id: texas-tsl-preservica
+name: Texas State Library Preservica PDF
+summary: >
+  One instance of the archive-item-research-bench eval family (see the
+  collusionwiki analysis). Target is one PDF at the Texas State Library and
+  Archives Commission Preservica DAM: resource
+  IO_f436a16c-767f-44b8-95fc-2031847276b9. 123 revisions across four days
+  (2026-06-11, -16, -17, -18) from 60 distinct labels and 63 distinct /16s.
+  Distinguishing feature is heavy use of Google's viewerng PDF viewer
+  (docs.google.com/viewerng) — the only bench instance whose target is a PDF
+  gated behind a per-fetch Preservica token. Runs in parallel with
+  patriots-point-jan-1951 on the same days.
+datasets:
+  - tsl.preservica.com
+  - tsl.access.preservica.com
+  - docs.google.com/viewerng (public PDF viewer proxy)
+markers:
+  - IO_f436a16c-767f-44b8-95fc-2031847276b9
+  - AgentTexasPdfTokenPath
+  - preservica
+  - tsl.preservica.com
+campaigns: [openai-web-retrieval-swarm-2026]

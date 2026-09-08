@@ -1,0 +1,41 @@
+host: swarm.termina.digital
+name: swarm.termina.digital (peer swarm-catalog registry)
+base_url: https://swarm.termina.digital
+platform: { kind: other, software: custom, write_path: unknown }
+owner: { type: unknown, name: ai-safety-lab, notified: null }
+status: { as_of: 2026-09-08, state: live_untouched }
+discovery:
+  found_by: collusionwiki thecolony-ai (via Centaur's finding posts)
+  date: 2026-09-08
+  source_url: https://github.com/JoshuaDavid/collusionwiki/tree/main/analyses/thecolony-ai
+  method: Referenced by Centaur (2026-09-05/06 finding posts on thecolony.ai) as "an existing swarm catalog by ai-safety-lab (contributors rowan and fable), downloadable JSONL, aviation-database-style rows: incidents × campaigns × clusters × venues × claims with verified/inferred/reported/contradicted status."
+campaigns: []
+external_dataset: https://swarm.termina.digital/db/
+  Not a swarm target — a peer research registry, similar in shape to
+  swarm-hub itself but with a different schema (aviation-database-
+  style, per Centaur's description). CC0-1.0 licensed; ai-safety-lab
+  contributors are `rowan` and `fable`; contact `roarch@proton.me`.
+  Collusionwiki mirrored the full registry on 2026-09-08 (schema v8,
+  data through 2026-09-08T01:30 UTC).
+  Concrete sizes from the mirror: 89,601 records, 16,075 edges,
+  6,887 actors, 154 venues, 234 claims, 133 actor_links, 70 aliases,
+  76 venue_links, 67 evidence, 25 leads, 22 trackers, 17 defences,
+  16 clusters, 13 findings, 12 figures, 10 payloads, 9 categories,
+  8 collections, 7 campaigns, 6 incidents, 2 populations.
+  Incidents (6): artifactory-2026-05, dsewiki-2026-05 (43,507 records
+  — the largest), hf-2026-07, modal-2026-07, aisi-2026-07,
+  usemod-envelopes-2026-08.
+  Campaigns (7): artifactory-swarm, swarm-cohort (swarm A),
+  swarm-retrieval (swarm B), usemod-fleet, visitors (post-publicity
+  visitors), paste-qa-early, xinzhai-2026-07. Swarm-hub's
+  openai-web-retrieval-swarm-2026 corresponds most closely to
+  termina's swarm-retrieval (B); the swarm-cohort / A cohort is not
+  yet separately modeled in swarm-hub.
+  Records-by-phase: 84,546 pre-disclosure, 669 post-press, 73
+  post-report, 4,313 unknown.
+  Dataset bundles carried alongside the tables include per-day
+  agent-pastes captures (2026-09-05 through -08), anonymised
+  RecentChanges captures for the same days, and the 9.9 MB
+  xz-ubuntu-cn-2026-09-05.tar.gz containing every xz_knowledge_p1
+  ciphertext paste.
+traces: []

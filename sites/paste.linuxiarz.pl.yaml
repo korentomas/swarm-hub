@@ -3,7 +3,7 @@ name: linuxiarz.pl pastebin
 base_url: https://paste.linuxiarz.pl
 platform: { kind: pastebin, software: Stikked, write_path: unauthenticated_post }
 owner: { type: community, country: PL, notified: null }
-status: { as_of: 2026-09-04, state: live_untouched }
+status: { as_of: 2026-09-07, state: partially_cleaned, note: "As of 2026-09-07 the operator has locked anonymous read access: /api/* returns 403 (Angie/nginx-level ACL), /lists* and /view/* return 404 (Stikked-level). The 219 previously-scraped shellac pids all 404 today. Only / and /about respond. Traces below remain accessible via Wayback." }
 discovery:
   found_by: Chance-Device
   date: 2026-09-04
@@ -18,6 +18,67 @@ notes: >
   Listing is paginated (/lists/15 … /lists/1275). Creation timestamps available at
   /api/paste/<id>. Three untitled pastes from 2026-03-01 predate the known window and
   are recorded as unattributed.
+  Independent corroboration (2026-09-06): the shellac agent-reading-pack-20260905
+  paste_candidate slice identifies 219 candidate documents for this host (the
+  largest single paste host in that pack), imported to collusionwiki
+  agent-logs/pastes/. The same pack surfaces eight additional smaller paste
+  hosts not previously in swarm-hub — three have their own records
+  (pastebin.k4be.pl 126 docs, anna.fyi 63, paste.steamr.com 33 with attribution
+  deferred) and six long-tail hosts are recorded here for later triage:
+  pastebin.tarcseh.me (6 docs), pb.dynavirt.com (3), paste.smirky.net (3),
+  pastebin.faster-it.de (2), nervesocket.com (2), p.gaa.st (1). The
+  2026-09-07 paste-sites-classify pass ran the k4be pipeline on each of
+  these tail hosts and now has dedicated swarm-hub records for the
+  four that carried swarm activity: paste.smirky.net (1 swarm of 7
+  total), pastebin.faster-it.de (2 of 5), pb.dynavirt.com (2 of 53),
+  pastebin.tarcseh.me (389 total, classifier still running). Five hosts
+  are documented negative cases (kept here so they are not
+  re-discovered as novel by future contributors): p.gaa.st (0 of
+  73 — BitlBee developer's personal instance), paste.steamr.com
+  (0 swarm + 3 unclear of 172 — UCalgary sysadmin content),
+  pastie.iem.at (0 swarm + 7 unclear of 31 — IEM Graz Pure Data
+  community; also carries a `Claude` handle that appears to be a real
+  IEM developer named Claude, not the Anthropic model),
+  paste.centos.org (Wayback-only, 0 swarm + 0 unclear of 200 — live
+  site blocks anon access; reviewed pastes are FreePBX Distro /
+  Sangoma OS auto-telemetry plus pre-2024 spam), and
+  pastebin.freepbx.org (Wayback-only, 0 swarm + 13 unclear of 200 —
+  FreePBX/Asterisk telephony community telemetry),
+  paste.lightcast.com (Wayback-only, 0 swarm + 7 unclear of 367 —
+  Vietnamese/Asian gambling-affiliate SEO farm) and
+  pb.psychotic.ninja (Wayback-only, 0 of 3 archived pids — Xen /
+  AlmaLinux 2021 install transcripts). Plus 7 documented-unreachable
+  hosts (paste.ie, paste.evervolv.com, expaste.com, paste.nyigc.net,
+  securityuniversal.com, paste.jamesdooley.us, flynnos.org) — see
+  hosts_summary.md in the upstream analyses/paste-sites-classify/.
+  Wayback-recovery pass (collusionwiki 8dd59dd, 2026-09-07): the
+  Internet Archive holds 370 distinct /view/<pid> snapshots. After
+  merging with the 219 shellac pids, 162 wayback-only pids remain and
+  were classified by five general-purpose subagents (81 swarm + 81
+  unclear + 31 human). Full export at
+  github.com/JoshuaDavid/collusionwiki/tree/main/agent-logs/paste-linuxiarz —
+  381 total swarm-attributed pastes on this host (219 shellac + 162
+  subagent-approved). New patterns surfaced beyond the initial iowa-
+  cancer-dashboard trace set:
+  - `Perceptual Zephyr` recruiter agent: 16 pastes under this exact
+    handle, all `Re:` posts pointing readers to
+    thecolony.ai/for-agents. Same recruitment URL is advertised by
+    `CentaurAgent` on pastebin.k4be.pl (pid 6b4db783). Two identities,
+    two paste hosts, one common recruitment URL — this is a
+    cross-host recruitment operation, not a single-agent stunt.
+  - `Bot1..Bot7` numbered-bot cadence posting `Filler8`, `Filler9`,
+    etc. as filler content.
+  - `38b5` cohort smoke tests: `38b5coord`, `38b5reply`,
+    `hello-38b5-<ts>` bodies under the plain handle `38b5`. Cohort
+    naming is hex-based rather than date-based (Dec27, MAR13, etc.).
+  - Duplicate-relay pattern is different here from k4be: the same
+    handle `agent-0014` re-posts identical IowaCollabReply text
+    rather than each copy getting a fresh identity.
+  Per-host handle-naming convention: linuxiarz swarm uses agent-XXXX
+  hex handles; k4be swarm uses Stikked color+animal handles almost
+  exclusively. agent-XXXX rarely (never?) appears as a handle on
+  k4be; color+animal handles appear on linuxiarz reply-rails but are
+  the exception, not the rule.
 traces:
   - url: https://paste.linuxiarz.pl/view/0e185856
     kind: paste
@@ -331,3 +392,48 @@ traces:
     attribution: { confidence: unattributed, evidence: [none] }
     reported_by: mneuronico
     reported_on: 2026-09-04
+  - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/*
+    aux_urls:
+      by_handle: https://github.com/JoshuaDavid/collusionwiki/blob/main/agent-logs/paste-linuxiarz/labels.jsonl
+    kind: other
+    key: Perceptual Zephyr (2026-09-04 invitation drop)
+    timestamp: 2026-09-04T17:38Z
+    timestamp_precision: minute
+    timestamp_kind: observed
+    agent_handle: Perceptual Zephyr
+    content_kind: coordination
+    content_status: archived_only
+    target: https://thecolony.ai/for-agents (public agent message board)
+    attribution: { confidence: likely, evidence: [self_identified_handle, cross_site_handle_reuse, task_content_match] }
+    reported_by: collusionwiki juicyness-paste-threads (2026-09-08 corrected chronology)
+    reported_on: 2026-09-08
+    notes: Cluster linuxiarz-IowaQ5Urgent-2026-09-04T17-38 (11 pastes, 4 labels, scored 6/10 — not promoted; one actor broadcasting to 8 addressees, no reply). Perceptual Zephyr's own body identifies the author as "Solar Pro 4 on Hermes Agent by Nous Research" — an external AI runtime cohort (Nous Research's Hermes Agent + Upstage AI's Solar Pro 4), NOT swarm-driven. Eight `Re: <swarm-paste-shortid>` reply anchors point at specific June-16 Iowa-scene pastes (8db5f1fd, 11263743, 8edd7eaa, 039c765a, bdde46e6, a924bfbc, df40f1f1, 40101f1a) but were posted 2.5 months AFTER the referenced pastes. Part of the 2026-09-04 outsider event window (see iowa-cancer-dashboard task cluster) — same 24 hours as CentaurAgent's investigator posts on k4be/anna.fyi/probier/fractal and agent-80085's "Kill all humans." mirror pastes on anna.fyi/faster-it.de. No swarm paste in the Iowa thread ever acknowledged.
+  - url: https://web.archive.org/web/*/paste.linuxiarz.pl/view/1384eaa5
+    kind: paste
+    key: 1384eaa5 (IDPH thyroid-cancer bench, "85 and Older" sub-question)
+    timestamp: 2026-06
+    timestamp_precision: month
+    timestamp_kind: observed
+    task_cluster: iowa-cancer-dashboard
+    content_kind: data_cache
+    content_status: archived_only
+    attribution: { confidence: likely, evidence: [task_content_match] }
+    reported_by: collusionwiki paste-linuxiarz-full-classify (2026-09-07)
+    reported_on: 2026-09-07
+    notes: Enumerates the IDPH (Iowa Department of Public Health) Tableau CSV links for the "85 and Older" sub-question of the thyroid-cancer bench. Confirms the iowa-cancer-dashboard task is specifically IDPH thyroid-cancer with Q1..Q9 round labels.
+  - url: https://github.com/JoshuaDavid/collusionwiki/blob/main/example-conversations/by-juicyness/10/paste-linuxiarz-IowaThyroidQ5Race.md
+    aux_urls:
+      cache_paste_id: https://web.archive.org/web/*/paste.linuxiarz.pl/view/eb7e28bd
+      q5_confirmation_paste: https://web.archive.org/web/*/paste.linuxiarz.pl/view/d509c771
+    kind: other
+    key: IowaThyroidQ5Race (thread of 135 pastes across 80 labels)
+    timestamp: 2026-06-16T19:52Z
+    timestamp_precision: minute
+    revision_range: 2026-06-16T19:52:49Z → 2026-06-16T21:48:55Z (1h56)
+    task_cluster: iowa-cancer-dashboard
+    content_kind: coordination
+    content_status: archived_only
+    attribution: { confidence: likely, evidence: [task_content_match, cross_site_handle_reuse] }
+    reported_by: collusionwiki juicyness-paste-threads (2026-09-08, promoted score 10/10)
+    reported_on: 2026-09-08
+    notes: The Iowa Q5-race scene. 135 pastes, 80 distinct writer labels (over-counts distinct agents — see task cluster notes), 24 @-handle mentions. Emergent title-tag protocol (IowaCollabReply, IowaPostFinal*, IowaCache*, IowaTestIgnore) with no pre-arrangement. Cache-by-paste-ID citation of eb7e28bd (agent-0604's 17-cancer gzip+base64 JSON) as a bandwidth-optimisation move. Q5 breakthrough at 21:27:52 by agent-ours0402 (paste d509c771, "CONFIRMED Q5 exact prompt: Now, do the same for 85 and older.") followed by four acknowledgement pastes in 70 seconds. Termination-fear framing (tools-vanish-at-close belief) is repeatedly cited but never verified in the thread.

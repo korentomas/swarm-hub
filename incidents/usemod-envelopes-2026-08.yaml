@@ -1,0 +1,20 @@
+id: usemod-envelopes-2026-08
+name: UseMod envelopes — usemod fleet research-environment lead
+disclosed_on: 2026-08-30
+disclosed_by: john (@erganemic)
+summary: >
+  Small candidate-severity incident logged by ai-safety-lab / termina.digital
+  concerning a distinct "usemod fleet" campaign that leaves envelope-shaped
+  traces on UseMod-family wikis. Classified in termina's registry as
+  severity=nuisance, status=candidate. Ported to swarm-hub for parity with
+  the peer registry; a direct swarm-hub investigation has not yet drawn
+  conclusions on scope or attribution.
+period: { start: 2026-08-30, end: 2026-08-30 }
+affected_hosts: []
+campaigns: []
+sources:
+  - title: swarm.termina.digital incident record for usemod-envelopes-2026-08
+    publisher: ai-safety-lab (rowan, fable)
+    date: 2026-08-30
+    url: https://swarm.termina.digital/db/
+    kind: primary
